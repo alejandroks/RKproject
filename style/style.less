@@ -2,3 +2,116 @@
   margin: 0;
   padding: 0;
 }
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+ul{
+  list-style: none;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-size: 0.94px;
+
+}
+#header {
+  width: 100%;
+  height: 230em;
+  background-color: red;
+  #innerHeader{
+    position: relative;
+    width: 100%;
+    #headerLogo{
+      width: 100%;
+      height: 35%;
+      background-color: green;
+      #logoHead{
+        width: 100%;
+        height: 100%;
+        #innerLogo{
+          width: 40%;
+          height: 100%;
+          position: relative;
+          margin: 0 auto;
+          background-color: yellow;
+          #logo{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 2em solid black;
+            background-color: aquamarine;
+            transform: skewX(-15deg);
+            #textLogo{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%)skewX(15deg);
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    #headerMenu{
+      width: 100%;
+      height: 30%;
+      background-color: blueviolet;
+      #MenuHead{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        #buttonsMenu{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          float: right;
+          .textButtons{
+            font-size:24em;
+            text-align: center;
+            padding: 6% 0;
+          }
+          #leftMenuButton{
+            float: left;
+            width: 20%;
+            height: 100%;
+            background-color: red;
+            cursor: pointer;
+          }
+          #rightMenuButton{
+            width: 20%;
+            float: right;
+            height: 100%;
+            background-color: yellow;
+            cursor: pointer;
+          }
+        }
+        #innerMenu{
+          width: 40%;
+          height: 100%;
+          position: relative;
+          margin: 0 auto;
+          background-color: yellow;
+          #Menu{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border-left: 2em solid black;border-right: 2em solid black;border-bottom: 2em solid black;
+            background-color: aquamarine;
+            transform: skewX(18deg);
+            #textMenu{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) skewX(-22deg);
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
