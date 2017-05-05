@@ -5,33 +5,59 @@
 <title>widescreen images switching effects focus map with jQuery</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/slider.js"></script><link rel="stylesheet" href="css/styleMainPage.css" type="text/css">
-</head>
-<body>
-<div class="slider">
-  <div class="bd">
-    <ul>
-      <li><img src="images/2.jpg" /></li>
-      <li><img src="images/2.jpg" /></li>
-      <li><img src="images/2.jpg" /></li>
-	  <li><img src="images/2.jpg" /></li>
-    </ul>
-  </div>
-  <div class="hd">
-    <ul>
-    </ul>
-  </div>
-  <div class="pnBtn prev"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
-  <div class="pnBtn next"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
-</div>
+<script type="text/javascript" src="js/NewsControl.js"></script><link rel="stylesheet" href="css/styleMainPage.css" type="text/css">
 <script type="text/javascript">
-jQuery(".slider .bd li").first().before( jQuery(".slider .bd li").last() );
-jQuery(".slider").hover(function(){
-	 jQuery(this).find(".arrow").stop(true,true).fadeIn(300)
-	 },function(){ 
-	 	jQuery(this).find(".arrow").fadeOut(300) });
-	 jQuery(".slider").slide(
-	 	{ titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop",autoPlay:true, vis:3,autoPage:true, trigger:"click"}
-	);
+    window.onload=function(){
+      SliderInner();
+      NewsWallCreate();
+
+
+    };
+    function NewsWallCreate(){
+      var News = new NewsControl({counteiner:document.getElementById("NewsBlockInner")});
+    }
+
+    function SliderInner(){
+      jQuery(".slider .bd li").first().before( jQuery(".slider .bd li").last() );
+      jQuery(".slider").hover(function(){
+        jQuery(this).find(".arrow").stop(true,true).fadeIn(300)
+      },function(){
+        jQuery(this).find(".arrow").fadeOut(300) });
+      jQuery(".slider").slide(
+              { titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop",autoPlay:true, vis:3,autoPage:true, trigger:"click"}
+      );
+
+    }
+
+
 </script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div class="slider">
+    <div class="bd">
+      <ul>
+        <li><img src="images/2.jpg" /></li>
+        <li><img src="images/2.jpg" /></li>
+        <li><img src="images/2.jpg" /></li>
+        <li><img src="images/2.jpg" /></li>
+      </ul>
+    </div>
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+    <div class="pnBtn prev"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+    <div class="pnBtn next"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+  </div>
+
+  <div id="NewsBlock">
+    <div id="NewsBlockInner">
+
+    </div>
+  </div>
+</div>
 </body>
 </html>
+

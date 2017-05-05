@@ -20,6 +20,22 @@
             </LessProfile>
           </value>
         </entry>
+        <entry key="1">
+          <value>
+            <LessProfile>
+              <option name="cssDirectories">
+                <list>
+                  <CssDirectory>
+                    <option name="path" value="G:\Документы\Учёба\Диплом\projectRkby\iframe-pages\mainPage\css" />
+                  </CssDirectory>
+                </list>
+              </option>
+              <option name="id" value="1" />
+              <option name="lessDirPath" value="G:\Документы\Учёба\Диплом\projectRkby\iframe-pages\mainPage\css" />
+              <option name="name" value="mainPage" />
+            </LessProfile>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
