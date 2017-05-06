@@ -22,17 +22,23 @@ NewsControl.prototype={
         table.cellPadding=20;
         table.cellSpacing=20;
         var data= this.getData();
-      for(var i = 0;i<data.length;i++){
-          var tr = document.createElement('tr');
-          var td =document.createElement('td');
-          tr.appendChild(td);
-          td.innerHTML=data[i];
-          table.appendChild(tr);
-      }
+        var content;
+        for(var i=0;i<data.length;i++){
+            var tr = document.createElement('tr');
+            for(content in data[i]){
+                var td =document.createElement('td');
+                    td.className="ForImgTable";
+                tr.appendChild(td);
+                var m = content;
+                td.innerHTML=content;
+            }
+            table.appendChild(tr);
+        }
         return table;
     },
     getData:function(){
-        var data=['132','123','321'];
+        var content={name:"Alex",url:"IMAGE"};
+        var data=[content,content,content];
       return data;
     },
     GetElement:function(id){

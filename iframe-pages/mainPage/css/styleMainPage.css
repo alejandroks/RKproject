@@ -32,6 +32,9 @@ img {
   height: 15px;
   border: 2px solid black;
 }
+.NewsBox table tr .ForImgTable {
+  width: 10px;
+}
 .NewsBox table tr td {
   padding-bottom: 100px;
 }
