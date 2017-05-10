@@ -15,24 +15,6 @@ img {
   height: 100%;
   position: relative;
 }
-.NewsBox {
-  background-color: white;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-.NewsBox .news-element {
-  width: 100%;
-  height: 50px;
-  background-color: blue;
-}
-.NewsBox .exeptionNews {
-  width: 100%;
-  height: 50px;
-  background-color: red;
-  text-align: center;
-  line-height: 25px;
-}
 #footer {
   text-align: center;
 }
@@ -151,4 +133,24 @@ img {
   height: 400px;
   background-color: chocolate;
   margin: 0 auto;
+}
+#NewsBlock #NewsBlockInner .NewsBlock {
+  width: 100%;
+}
+#NewsBlock #NewsBlockInner .NewsBlock .NewsRow {
+  width: 100%;
+  height: 50px;
+  background-color: #00d0ce;
+  color: white;
+  cursor: pointer;
+}
+#NewsBlock #NewsBlockInner .NewsBlock .NewsRow .newsCells {
+  display: inline-block;
+}
+#NewsBlock #NewsBlockInner .exeptionNews {
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  text-align: center;
+  line-height: 25px;
 }

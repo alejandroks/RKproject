@@ -10,31 +10,35 @@ NewsControl.prototype = {
     constructor: NewsControl,
     NewsCreate: function () {
         var counteiner = this.counteiner;
-        var divBoxNews = document.createElement('div');
-        divBoxNews.className = "NewsBox";
-        var ElementNews = this.NewsElementCreate();
-        divBoxNews.appendChild(ElementNews);
-        counteiner.appendChild(divBoxNews);
+        var newsBlock = this.NewsElementCreate();
+        counteiner.appendChild(newsBlock);
 
     },
     NewsElementCreate: function () {
         var data = this.getData();
-        var newsElement = document.createElement('div');
-        newsElement.className = "news-element";
+        var newsBlock = document.createElement('div');
+        newsBlock.className = "NewsBlock";
         if (data != null && data != undefined) {
-            return newsElement;
+            for(var i = 0; i<data.length;i++){
+                var newsRow=document.createElement('div');
+                newsRow.className="NewsRow";
+                for(var dataIndex in data[i]){
+                    var elemNews=document.createElement("div");
+                    elemNews.className="newsCells";
+                    elemNews.innerHTML=data[i][dataIndex];
+                    newsRow.appendChild(elemNews);
+                }
+                newsBlock.appendChild(newsRow);
+            }
+            return newsBlock;
         }
-        newsElement.className="exeptionNews";
-        newsElement.innerHTML="Новых Новостей нет, иди нахуй"
-        return newsElement;
+        newsBlock.className="exeptionNews";
+        newsBlock.innerHTML="Новых Новостей нет, иди нахуй";
+        return newsBlock;
     },
     getData: function () {
-        // var content = { name: "Alex", url: "IMAGE" };
-        // var data = [content, content, content];
-        var data;
+        var content = { name: "Alex", url: "IMAGE" };
+        var data = [content, content, content];
         return data;
-    },
-    GetElement: function (id) {
-        return document.getElementById(id);
     }
 }
