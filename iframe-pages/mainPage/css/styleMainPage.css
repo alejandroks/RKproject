@@ -21,22 +21,17 @@ img {
   position: relative;
   margin: 0 auto;
 }
-.NewsBox table {
+.NewsBox .news-element {
   width: 100%;
-  height: 100%;
-  border: 5px solid black;
-  border-collapse: collapse;
+  height: 50px;
+  background-color: blue;
 }
-.NewsBox table tr {
+.NewsBox .exeptionNews {
   width: 100%;
-  height: 15px;
-  border: 2px solid black;
-}
-.NewsBox table tr .ForImgTable {
-  width: 10px;
-}
-.NewsBox table tr td {
-  padding-bottom: 100px;
+  height: 50px;
+  background-color: red;
+  text-align: center;
+  line-height: 25px;
 }
 #footer {
   text-align: center;
