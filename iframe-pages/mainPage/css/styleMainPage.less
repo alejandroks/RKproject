@@ -124,33 +124,51 @@ img {
     left:0;
     background:url(../images/slider-arrow.png) 0 0 no-repeat;
 }
-#NewsBlock{
+#newsBlock{
     margin-top: 40px;
     width: 100%;
-    #NewsBlockInner{
+    #newsBlockInner{
         width: 1000px;
         position: relative;
-        height: 400px;
         background-color: chocolate;
         margin: 0 auto;
-        .NewsBlock{
+        .newsBlockRows{
             width: 100%;
-            .NewsRow{
+            .newsRow{
+                position: relative;
                 width: 100%;
                 min-height: 50px;
                 background-color: #00d0ce;
                 color: white;
                 cursor: pointer;
-                .newsCell{
                 display: inline-block;
+                .newsCellText{
                 white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 400px;
+                width: 900px;
+                float: left;
+                    min-height: 50px;
                 &.expanded{
                     white-space: normal;
                     }
+                    .headNews{
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .text{
+                        font-size: 12px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
                 }
+                .newsCellImg{
+                    position: relative;
+                    width: 100px;
+                    float: right;
+                    height: 50px;
+                    background-color: red;
+                }
+
             }
         }
         .exeptionNews{

@@ -123,38 +123,54 @@ img {
   left: 0;
   background: url(../images/slider-arrow.png) 0 0 no-repeat;
 }
-#NewsBlock {
+#newsBlock {
   margin-top: 40px;
   width: 100%;
 }
-#NewsBlock #NewsBlockInner {
+#newsBlock #newsBlockInner {
   width: 1000px;
   position: relative;
-  height: 400px;
   background-color: chocolate;
   margin: 0 auto;
 }
-#NewsBlock #NewsBlockInner .NewsBlock {
+#newsBlock #newsBlockInner .newsBlockRows {
   width: 100%;
 }
-#NewsBlock #NewsBlockInner .NewsBlock .NewsRow {
+#newsBlock #newsBlockInner .newsBlockRows .newsRow {
+  position: relative;
   width: 100%;
   min-height: 50px;
   background-color: #00d0ce;
   color: white;
   cursor: pointer;
-}
-#NewsBlock #NewsBlockInner .NewsBlock .NewsRow .newsCell {
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 400px;
 }
-#NewsBlock #NewsBlockInner .NewsBlock .NewsRow .newsCell.expanded {
+#newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText {
+  white-space: nowrap;
+  width: 900px;
+  float: left;
+  min-height: 50px;
+}
+#newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText.expanded {
   white-space: normal;
 }
-#NewsBlock #NewsBlockInner .exeptionNews {
+#newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText .headNews {
+  font-size: 20px;
+  font-weight: 600;
+}
+#newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText .text {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellImg {
+  position: relative;
+  width: 100px;
+  float: right;
+  height: 50px;
+  background-color: red;
+}
+#newsBlock #newsBlockInner .exeptionNews {
   width: 100%;
   height: 50px;
   background-color: red;

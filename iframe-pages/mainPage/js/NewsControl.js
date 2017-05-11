@@ -16,31 +16,44 @@ NewsControl.prototype = {
     NewsElementCreate: function () {
         var data = this.getData();
         var newsBlock = document.createElement('div');
-        newsBlock.className = "NewsBlock";
+        newsBlock.className = "newsBlockRows";
         if (data) {
-            for (var i = 0; i < data.length; i++) {
+            for (var elementNumberData = 0; elementNumberData < data.length; elementNumberData++) {
+                var dataItem = data[elementNumberData];
+
                 var newsRow = document.createElement('div');
-                newsRow.className = "NewsRow";
+                newsRow.className = "newsRow";
 
-                var dataItem = data[i];
-                var elemNews = document.createElement("div");
-                elemNews.className = "newsCell";
 
-                elemNews.onclick = function () {
+                var elemNewsText = document.createElement("div");
+                elemNewsText.className = "newsCellText";
+
+                elemNewsText.onclick = function () {
                     this.classList.toggle("expanded");
-                }
+                };
 
-                elemNews.appendChild(document.createTextNode(dataItem.name));
-                newsRow.appendChild(elemNews);
+                var headNews =document.createElement('div');
+                headNews.className="headNews";
+                headNews.appendChild(document.createTextNode(dataItem.head));
+                newsRow.appendChild(headNews);
 
-                var elemNews = document.createElement("div");
-                elemNews.className = "newsCell";
+                var text =document.createElement('div');
+                text.className="text";
+                text.appendChild(document.createTextNode(dataItem.name));
 
-                var newsImg = elemNews.appendChild(document.createElement('img'));
+                elemNewsText.appendChild(headNews);
+                elemNewsText.appendChild(text);
+                newsRow.appendChild(elemNewsText);
+
+                var elemNewsImg = document.createElement("div");
+                elemNewsImg.className = "newsCellImg";
+
+                var newsImg = elemNewsImg.appendChild(document.createElement('img'));
                 newsImg.className = "news-url";
                 newsImg.setAttribute("url", dataItem.url);
 
-                newsRow.appendChild(elemNews);
+
+                newsRow.appendChild(elemNewsImg);
                 newsBlock.appendChild(newsRow);
             }
 
@@ -50,9 +63,12 @@ NewsControl.prototype = {
         newsBlock.innerHTML = "Новых Новостей нет, иди нахуй";
         return newsBlock;
     },
+    addToggle: function(){
+
+    },
     getData: function () {
-        var content = { name: "AlexAlexAlexAlexAlexAlexAlexAlexAlex Alex Alex Alex Alex Alex Alex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex AlexAlex Alex Alex Alex Alex ", url: "IMAGE" };
-        var data = [content, content, content];
+        var content = { name: "AlexAlexAlexAlexAlexAlexAlexAlexAlex AllexAlexAlexlexAlexAlexlexAlexAlexlexAlexAlexlexAlexAlexlexAlexAlexex Alex Alex AlexxAlex Alex AlexxAlex Alex AlexxAlex Alex AlexxAlex Alex Alex   ", url: "IMAGE",head:"Главноя новость" };
+        var data = [content, content, content, content, content, content];
         return data;
     }
 }
