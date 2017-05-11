@@ -139,13 +139,20 @@ img {
 }
 #NewsBlock #NewsBlockInner .NewsBlock .NewsRow {
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   background-color: #00d0ce;
   color: white;
   cursor: pointer;
 }
-#NewsBlock #NewsBlockInner .NewsBlock .NewsRow .newsCells {
+#NewsBlock #NewsBlockInner .NewsBlock .NewsRow .newsCell {
   display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+#NewsBlock #NewsBlockInner .NewsBlock .NewsRow .newsCell.expanded {
+  white-space: normal;
 }
 #NewsBlock #NewsBlockInner .exeptionNews {
   width: 100%;

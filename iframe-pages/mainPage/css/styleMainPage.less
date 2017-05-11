@@ -137,12 +137,19 @@ img {
             width: 100%;
             .NewsRow{
                 width: 100%;
-                height: 50px;
+                min-height: 50px;
                 background-color: #00d0ce;
                 color: white;
                 cursor: pointer;
-                .newsCells{
-                    display: inline-block;
+                .newsCell{
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 400px;
+                &.expanded{
+                    white-space: normal;
+                    }
                 }
             }
         }
