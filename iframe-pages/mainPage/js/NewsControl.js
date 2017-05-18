@@ -35,7 +35,6 @@ NewsControl.prototype = {
                 var headNews =document.createElement('div');
                 headNews.className="headNews";
                 headNews.appendChild(document.createTextNode(dataItem.head));
-                newsRow.appendChild(headNews);
 
                 var text =document.createElement('div');
                 text.className="text";
@@ -67,7 +66,7 @@ NewsControl.prototype = {
 
     },
     getData: function () {
-        var content = { name: "AlexAlexAlexAlexAlexAlexAlexAlexAlex AllexAlexAlexlexAlexAlexlexAlexAlexlexAlexAlexlexAlexAlexlexAlexAlexex Alex Alex AlexxAlex Alex AlexxAlex Alex AlexxAlex Alex AlexxAlex Alex Alex   ", url: "IMAGE",head:"Главноя новость" };
+        var content = { name: "ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ", url: "IMAGE",head:"Главноя новость" };
         var data = [content, content, content, content, content, content];
         return data;
     }

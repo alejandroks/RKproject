@@ -146,10 +146,11 @@ img {
   display: inline-block;
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText {
+  margin-left: 5px;
   white-space: nowrap;
-  width: 900px;
-  float: left;
+  width: 895px;
   min-height: 50px;
+  float: right;
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText.expanded {
   white-space: normal;
@@ -166,8 +167,8 @@ img {
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellImg {
   position: relative;
   width: 100px;
-  float: right;
-  height: 50px;
+  float: left;
+  height: 100%;
   background-color: red;
 }
 #newsBlock #newsBlockInner .exeptionNews {
