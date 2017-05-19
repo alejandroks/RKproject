@@ -20,33 +20,33 @@ img {
 }
 .slider {
   width: 100%;
-  min-width: 980px;
-  height: 335px;
+  min-width: 985px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   background: #fff;
   text-align: center;
 }
 .slider .bd {
-  width: 980px;
+  width: 985px;
   position: absolute;
   left: 50%;
   margin-left: -490px;
 }
 .slider .bd li {
-  width: 980px;
+  width: 985px;
   overflow: hidden;
 }
 .slider .bd li img {
   display: block;
-  width: 980px;
-  height: 335px;
+  width: 985px;
+  height: 400px;
 }
 .slider .tempWrap {
   overflow: visible !important;
 }
 .slider .tempWrap ul {
-  margin-left: -980px !important;
+  margin-left: -995px !important;
 }
 .slider .hd {
   position: absolute;
@@ -68,7 +68,7 @@ img {
   background: url(../images/slider-btn.png) 0 -10px no-repeat;
   margin: 0 5px;
   cursor: pointer;
-  filter: alpha(opacity=60);
+  filter: alpha(opacity=80);
   opacity: 0.6;
 }
 .slider .hd li.on {
@@ -81,16 +81,16 @@ img {
   z-index: 1;
   top: 0;
   width: 100%;
-  height: 335px;
+  height: 400px;
   cursor: pointer;
 }
 .slider .prev {
   left: -50%;
-  margin-left: -490px;
+  margin-left: -500px;
 }
 .slider .next {
   left: 50%;
-  margin-left: 490px;
+  margin-left: 485px;
 }
 .slider .pnBtn .blackBg {
   display: block;
@@ -98,18 +98,18 @@ img {
   left: 0;
   top: 0;
   width: 100%;
-  height: 335px;
-  background: #000;
-  filter: alpha(opacity=50);
-  opacity: 0.8;
+  height: 400px;
+  background: black;
+  filter: alpha(opacity=80);
+  opacity: 0.75;
 }
 .slider .pnBtn .arrow {
   display: none;
   position: absolute;
-  top: 0;
+  top: 20px;
   z-index: 1;
   width: 60px;
-  height: 335px;
+  height: 350px;
 }
 .slider .pnBtn .arrow:hover {
   filter: alpha(opacity=60);
@@ -128,9 +128,8 @@ img {
   width: 100%;
 }
 #newsBlock #newsBlockInner {
-  width: 1000px;
+  width: 990px;
   position: relative;
-  background-color: chocolate;
   margin: 0 auto;
 }
 #newsBlock #newsBlockInner .newsBlockRows {
@@ -140,17 +139,17 @@ img {
   position: relative;
   width: 100%;
   min-height: 50px;
-  background-color: #00d0ce;
   color: white;
   cursor: pointer;
   display: inline-block;
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText {
-  margin-left: 5px;
+  background-color: dodgerblue;
+  margin-top: 5px;
   white-space: nowrap;
-  width: 895px;
+  width: 900px;
   min-height: 50px;
-  float: right;
+  display: inline-block;
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText.expanded {
   white-space: normal;
@@ -166,10 +165,11 @@ img {
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellImg {
   position: relative;
-  width: 100px;
+  width: 50px;
   float: left;
-  height: 100%;
+  height: 50px;
   background-color: red;
+  margin: 5px 5px 5px 5px;
 }
 #newsBlock #newsBlockInner .exeptionNews {
   width: 100%;
