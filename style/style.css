@@ -45,7 +45,7 @@ body {
 }
 #header #innerHeader #topLine {
   width: 100%;
-  height: 10%;
+  height: 5%;
 }
 #header #innerHeader #topLine #innerLine {
   width: 100%;
@@ -55,7 +55,7 @@ body {
 }
 #header #innerHeader #logoAndSearch {
   width: 100%;
-  height: 25%;
+  height: 55px;
 }
 #header #innerHeader #logoAndSearch #innerLogoAndSearch {
   width: 100%;
@@ -83,7 +83,7 @@ body {
   content: "";
   width: 0;
   height: 0;
-  border-top: 75px solid #00d0ce;
+  border-top: 55px solid #00d0ce;
   border-left: 40px solid transparent;
   margin-left: -40px;
 }
@@ -92,7 +92,7 @@ body {
   content: "";
   width: 0;
   height: 0;
-  border-top: 75px solid #00d0ce;
+  border-top: 55px solid #00d0ce;
   border-right: 40px solid transparent;
   margin-right: -40px;
 }
@@ -116,7 +116,7 @@ body {
   content: "";
   width: 0;
   height: 0;
-  border-top: 75px solid #00d0ce;
+  border-top: 55px solid #00d0ce;
   border-left: 55px solid transparent;
 }
 #header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch {
@@ -135,8 +135,8 @@ body {
 #header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #topSearchText {
   width: 100%;
   float: left;
-  height: 30px;
-  font-size: 20px;
+  height: 20px;
+  font-size: 18px;
   text-align: center;
   padding: 2px 2px;
   box-sizing: border-box;
@@ -146,20 +146,20 @@ body {
   position: absolute;
   right: 2%;
   bottom: 0;
-  width: 30%;
-  height: 45px;
+  width: 20%;
+  height: 35px;
 }
 #header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #SearchButton img {
   float: right;
   padding: 2px 0;
-  width: 39px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
 }
 #header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #input_search {
   background-color: saddlebrown;
   position: absolute;
   width: 80%;
-  height: 35px;
+  height: 25px;
   left: 1%;
   bottom: 4px;
   border-bottom: 1px solid white;
@@ -315,7 +315,7 @@ body {
   width: 100%;
   height: 50px;
   position: absolute;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 #header #innerHeader #menuUl #innerMenuUl {
   width: 100%;
@@ -382,10 +382,10 @@ body {
 }
 #center #innerCenter {
   width: 100%;
-  overflow: hidden;
-  height: 850px;
   position: relative;
+  height: auto;
   background-color: royalblue;
+  overflow-y: inherit;
 }
 #center #innerCenter iframe {
   width: 100%;

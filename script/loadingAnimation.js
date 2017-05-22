@@ -9,12 +9,17 @@ window.onload=function(){
     buttonLeft.onclick=function ButtonClick(){
         firstLine.style.display = "block";
         secondLine.style.display = "block";
-    }
+    };
     buttonRigth.onclick=function ButtonClick(){
         firstLine.style.display = "block";
         secondLine.style.display = "block";
         secondLine.id="expand2_otherAnimation";
         secondLine.style.webkitAnimationPlayState="running";
 
-    }
-}
+    };
+    var sizeElement=document.getElementsByTagName('iframe')[0];
+    var s=sizeElement.contentWindow.document.body.scrollHeight;
+    var center=document.getElementById('innerCenter');
+   //alert(getComputedStyle(sizeElement).height);
+    center.style.height=s;
+};

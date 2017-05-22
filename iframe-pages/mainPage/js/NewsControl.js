@@ -30,6 +30,7 @@ NewsControl.prototype = {
 
                 elemNewsText.onclick = function () {
                     this.classList.toggle("expanded");
+
                 };
 
                 var headNews =document.createElement('div');
