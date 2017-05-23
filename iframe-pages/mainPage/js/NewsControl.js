@@ -60,7 +60,7 @@ NewsControl.prototype = {
             return newsBlock;
         }
         newsBlock.className = "exeptionNews";
-        newsBlock.innerHTML = "Новых Новостей нет, иди нахуй";
+        newsBlock.innerHTML = "Новых Новостей нет";
         return newsBlock;
     },
     addToggle: function(){
@@ -71,4 +71,4 @@ NewsControl.prototype = {
         var data = [content, content, content, content, content, content];
         return data;
     }
-}
+};

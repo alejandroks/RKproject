@@ -3,7 +3,13 @@
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <meta charset="utf-8" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="script/loadingAnimation.js"></script>
+    <script type="text/javascript" src="script/MainIndexControl.js"></script>
+    <script type="text/javascript">
+        window.onload = function (){
+            var MainControl = new MainIndexControl({counteiner:document.getElementById('menu')});
+        };
+
+    </script>
 </head>
 <body>
 <div id="wrapper">
@@ -97,7 +103,7 @@
 
     <div id="center">
         <div id="innerCenter">
-            <iframe id="ourframe" src="iframe-pages/mainPage/mainPage.html" ></iframe>
+            <iframe id="mainIframe" src="iframe-pages/mainPage/mainPage.html" ></iframe>
         </div>
     </div>
 
