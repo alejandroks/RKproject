@@ -1,17 +1,16 @@
 
 function MainIndexControl(options){
-    var selfref = this;
+    var selfRef = this;
     var counteiner=options.counteiner;
-    selferf.MainIndexControlCreateMenuTopControl();
-    selferf.IframeSizeSet();
+    selfRef.MainIndexControlCreateMenuTopControl();
+    selfRef.IframeSizeSet();
 }
 MainIndexControl.prototype={
     constructor: MainIndexControl,
     MainIndexControlCreateMenuTopControl:function(){
         var leftButtonMenu = $('#buttonMenuLeft');
         leftButtonMenu.click(function OnClickButton(){
-
-            selfref.MenuShow(leftButtonMenu);
+        this.MenuShow(leftButtonMenu);
     })
     },
     MenuShow: function(menuControlObj){
