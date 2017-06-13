@@ -67,7 +67,7 @@ NewsControl.prototype = {
 
     },
     getData: function () {
-        var content = { name: "ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ALex ", url: "IMAGE",head:"Главноя новость" };
+        var content = { name: "Сведения о свободных торговых объектах и складских помещениях предоставляемых в аренду на территории КТУП Минский Раковский кирмаш предлагает более 150 мест торговли и аренды  ", url: "IMAGE",head:"Главноя новость" };
         var data = [content, content, content, content, content, content];
         return data;
     }
