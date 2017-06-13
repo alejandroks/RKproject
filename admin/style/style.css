@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html {
+  height: 100%;
+  display: block;
+}
+div {
+  display: block;
+}
+#wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #00d0ce;
+}
+#header {
+  background-color: #279c9c;
+  width: 100%;
+  height: 40px;
+}
+#header #headerInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#header #headerInner #rigthButtonAndAdminName {
+  height: 100%;
+  float: right;
+}
+#header #headerInner #rigthButtonAndAdminName #innerRigthButtonAndAdminName {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  line-height: 40px;
+  color: white;
+}
+#header #headerInner #rigthButtonAndAdminName #innerRigthButtonAndAdminName #labelAdmin {
+  font-style: italic;
+  float: left;
+}
+#header #headerInner #rigthButtonAndAdminName #innerRigthButtonAndAdminName #buttonExit {
+  cursor: pointer;
+  float: right;
+  margin-left: 5px;
+  margin-right: 2px;
+}
+#header #headerInner #rigthButtonAndAdminName #innerRigthButtonAndAdminName #buttonExit:hover {
+  color: red;
+}
+#center {
+  width: 100%;
+  height: 200px;
+}
+#center #centerInner {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+#center #centerInner ul {
+  margin-top: 50px;
+}
+#center #centerInner ul li {
+  background-color: #279c9c;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  float: left;
+  margin-left: 40px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+
+}
+ul {
+  list-style: none;
+}
+html {
+  height: 100%;
+  display: block;
+}
+div{
+    display: block;
+}
+#wrapper{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color:#00d0ce;
+}
+#header{
+  background-color: #279c9c;
+  width: 100%;
+  height: 40px;
+  #headerInner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    #rigthButtonAndAdminName{
+      height: 100%;
+      float: right;
+      #innerRigthButtonAndAdminName{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-size: 14px;
+        line-height: 40px;
+        color: white;
+        #labelAdmin{
+          font-style:italic;
+          float: left;
+        }
+        #buttonExit{
+          cursor: pointer;
+          float: right;
+          margin-left: 5px;
+          margin-right: 2px;
+          &:hover{
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+#center{
+  width: 100%;
+  height: 200px;
+  #centerInner{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    ul{
+      margin-top: 50px;
+      li{
+        background-color:#279c9c;
+        color: white;
+        text-align: center;
+        line-height: 200px;
+        float: left;
+        margin-left: 40px;
+        width: 200px;
+        height: 200px;
+        border: 2px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
