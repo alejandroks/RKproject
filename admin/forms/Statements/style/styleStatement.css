@@ -36,7 +36,7 @@ body {
   height: 100%;
   position: relative;
 }
-#header #headerInner #leftButtonStatement {
+#header #headerInner #leftButtonStatementExpandMenu {
   width: 50px;
   height: 100%;
   background-color: red;
@@ -76,21 +76,31 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 #center #innerCenter #leftControlMenu {
-  width: 200px;
+  width: 0px;
+  display: table-cell;
   height: 100%;
   background-color: mediumslateblue;
   float: left;
   position: relative;
 }
+#center #innerCenter #leftControlMenu.expandMenu {
+  width: 200px;
+}
 #center #innerCenter #statementTable {
-  float: left;
-  position: relative;
-  max-width: 100%;
+  display: table-cell;
+  width: 100%;
   height: 100%;
   background-color: royalblue;
-  overflow-x: hidden;
+}
+#center #innerCenter #statementTable #container {
+  position: absolute;
+  overflow: auto;
+  height: 100%;
+  background-color: royalblue;
+  white-space: nowrap;
 }
 #footer {
   position: relative;
