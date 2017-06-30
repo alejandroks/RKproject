@@ -344,11 +344,8 @@ body {
   height: 3px;
 }
 #header #innerHeader #menuUl #innerMenuUl #LoadingLineTop #expand {
-  display: none;
-  width: 100%;
   height: 3px;
   background: #279c9c;
-  animation: fullexpand 3s ease-out;
   position: absolute;
   left: 0;
 }
@@ -448,38 +445,6 @@ body {
   height: 10px;
   background-color: #00d0ce;
   margin-top: -10px;
-}
-@-moz-keyframes fullexpand {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes fullexpand {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-moz-keyframes fullexpand2 {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes fullexpand2 {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
 }
 @keyframes rotate {
   50% {

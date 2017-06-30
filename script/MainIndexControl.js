@@ -5,7 +5,7 @@ function MainIndexControl(options) {
     this.transportService = new TransportService();
 
     selfRef.MainIndexControlCreateMenuTopControl();
-    selfRef.IframeSizeSet();
+    selfRef.iframeSizeSet();
 
     this.sendRequest({
         args: {
@@ -22,11 +22,8 @@ MainIndexControl.prototype = {
     MainIndexControlCreateMenuTopControl: function () {
         var leftButtonMenu = $('#buttonMenuLeft');
         leftButtonMenu.click(function OnClickButton() {
-            this.MenuShow(leftButtonMenu);
+            menuShow(document.getElementById('LoadingLineTop').offsetWidth);
         })
-    },
-    MenuShow: function (menuControlObj) {
-
     },
     MainControlAnimationMenu: function () {
 
@@ -34,7 +31,7 @@ MainIndexControl.prototype = {
     MainControlAnimationStartPlay: function () {
 
     },
-    IframeSizeSet: function () {
+    iframeSizeSet: function () {
         var iframe = $('#mainIframe').contents();
         var newsBlockParentIframe = $('#innerCenter');
         var iframeSize = iframe.find('body').height();
@@ -82,7 +79,7 @@ function TransportService() {
                 errorHandler(errMsg, jqXHR.statusText);
             }
         });
-    }
+    };
 
     this.post = function (url, data, options) {
         var async = options.async;
@@ -104,4 +101,18 @@ function TransportService() {
 
         this.request('POST', url, data, async, successHandler, errorHandler, completeHandler);
     }
+}
+function menuShow(objectParentCss){
+    var start = Date.now();
+    var timer = setInterval(function(){
+       var timePassed = Date.now() - start;
+        if(timePassed>=objectParentCss){
+            clearInterval(timer);
+            return;
+        }
+        drawAnimation(timePassed,document.getElementById('expand'));
+    });
+}
+function drawAnimation(timePassed,objectAnimation){
+        objectAnimation.style.width = timePassed  + 'px';
 }

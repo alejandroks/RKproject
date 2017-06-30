@@ -8,7 +8,7 @@ function start(route) {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
             'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-        })
+        });
 
         request.on('data', function (data) {
             route(data, response);
