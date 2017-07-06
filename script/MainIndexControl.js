@@ -22,8 +22,15 @@ MainIndexControl.prototype = {
     MainIndexControlCreateMenuTopControl: function () {
         var leftButtonMenu = $('#buttonMenuLeft');
         leftButtonMenu.click(function OnClickButton() {
-            menuShow(document.getElementById('LoadingLineTop').offsetWidth);
-        })
+                menuShow(function(timePassed){
+                    var lineOne = document.getElementById('expand');
+                    var lineTwo = document.getElementById('expand2');
+                    lineOne.style.width =  timePassed + 'px';
+                    lineTwo.style.width = timePassed + 'px';
+                    var i = $('#LoadingLineTop');
+                    i.css('background','red');
+                },document.getElementById('LoadingLineTop').offsetWidth);
+            });
     },
     MainControlAnimationMenu: function () {
 
@@ -102,17 +109,23 @@ function TransportService() {
         this.request('POST', url, data, async, successHandler, errorHandler, completeHandler);
     }
 }
-function menuShow(objectParentCss){
-    var start = Date.now();
-    var timer = setInterval(function(){
-       var timePassed = Date.now() - start;
-        if(timePassed>=objectParentCss){
-            clearInterval(timer);
-            return;
+function menuShow(draw,duration){
+    var start = performance.now();
+
+    requestAnimationFrame(function animate(time) {
+        // определить, сколько прошло времени с начала анимации
+        var timePassed = time - start;
+
+        // возможно небольшое превышение времени, в этом случае зафиксировать конец
+        if (timePassed > duration) timePassed = duration;
+
+        // нарисовать состояние анимации в момент timePassed
+        draw(timePassed);
+
+        // если время анимации не закончилось - запланировать ещё кадр
+        if (timePassed < duration) {
+            requestAnimationFrame(animate);
         }
-        drawAnimation(timePassed,document.getElementById('expand'));
+
     });
-}
-function drawAnimation(timePassed,objectAnimation){
-        objectAnimation.style.width = timePassed  + 'px';
 }
