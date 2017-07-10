@@ -341,23 +341,35 @@ body {
 }
 #header #innerHeader #menuUl #innerMenuUl #LoadingLineTop {
   width: 100%;
-  height: 3px;
+  height: 4px;
 }
-#header #innerHeader #menuUl #innerMenuUl #LoadingLineTop #expand {
-  height: 3px;
+#header #innerHeader #menuUl #innerMenuUl #LoadingLineTop #expand_left {
+  height: 4px;
   background: #279c9c;
   position: absolute;
   left: 0;
 }
+#header #innerHeader #menuUl #innerMenuUl #LoadingLineTop #expand_right {
+  height: 4px;
+  background: #00d0ce;
+  position: absolute;
+  right: 0;
+}
 #header #innerHeader #menuUl #innerMenuUl #LoadingLineBot {
   width: 100%;
-  height: 3px;
+  height: 4px;
 }
-#header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2 {
-  height: 3px;
+#header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2_right {
+  height: 4px;
   background: #279c9c;
   position: absolute;
   right: 0;
+}
+#header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2_left {
+  height: 4px;
+  background: #00d0ce;
+  position: absolute;
+  left: 0;
 }
 #center {
   width: 100%;

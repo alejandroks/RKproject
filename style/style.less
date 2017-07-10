@@ -351,23 +351,34 @@ body{
         }
         #LoadingLineTop {
           width: 100%;
-          height: 3px;
-          #expand {
-            height: 3px;
+          height: 4px;
+          #expand_left {
+            height: 4px;
             background: @secondary-accent-color;
             position: absolute;
             left: 0;
           }
+          #expand_right {
+            height: 4px;
+            background: @primary-color;
+            position: absolute;
+            right: 0;
+          }
         }
         #LoadingLineBot {
           width: 100%;
-          height: 3px;
-          #expand2 {
-            height: 3px;
+          height: 4px;
+          #expand2_right {
+            height: 4px;
             background: @secondary-accent-color;
             position: absolute;
             right: 0;
-
+          }
+          #expand2_left {
+            height: 4px;
+            background: @primary-color;
+            position: absolute;
+            left: 0;
           }
         }
       }
@@ -453,42 +464,6 @@ body{
 }
 
 
-//@-moz-keyframes fullexpand {
-//  0%  { width: 0;
-//  }
-//
-//  100% {
-//    width: 100%;
-//  }
-//}
-//
-//@-webkit-keyframes fullexpand {
-//  0% {
-//    width: 0;
-//  }
-//
-//  100% {
-//    width: 100%;
-//  }
-//}
-//@-moz-keyframes fullexpand2 {
-//  0%  { width: 0;
-//  }
-//
-//  100% {
-//    width: 100%;
-//  }
-//}
-//
-//@-webkit-keyframes fullexpand2 {
-//  0% {
-//    width: 0;
-//  }
-//
-//  100% {
-//    width: 100%;
-//  }
-//}
 @keyframes rotate {
   50% {
     transform: rotateX(-90deg);
