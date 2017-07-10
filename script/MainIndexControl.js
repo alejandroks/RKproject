@@ -27,15 +27,15 @@ MainIndexControl.prototype = {
         var leftButtonMenu = $('#buttonMenuLeft');
         leftButtonMenu.click(function OnClickButton() {
             animate({
-                duration:1000,
-                timing:function(timeFaction){
-                return timeFaction;
-                 },
-                draw:function(progress){
-                    lineOneLeft.style.width = progress * 100 +'%';
+                duration: 1500,
+                timing: function (timeFaction) {
+                    return timeFaction;
+                },
+                draw: function (progress) {
+                    lineOneLeft.style.width = progress * 100 + '%';
 
-                    lineTwoRight.style.width = progress * 100 +'%';
-                    if(progress==1){
+                    lineTwoRight.style.width = progress * 100 + '%';
+                    if (progress == 1) {
                         parentLineOne.style.backgroundColor = '#279c9c';
                         parentLineTwo.style.backgroundColor = '#279c9c';
                         lineOneLeft.style.width = '0';
@@ -43,21 +43,21 @@ MainIndexControl.prototype = {
                     }
                 }
             });
-            });
-        var rightButtonMenu = $ ('#buttonRightMenu');
+        });
+        var rightButtonMenu = $('#buttonRightMenu');
         var lineOneRight = document.getElementById('expand_right');
         var lineTwoLeft = document.getElementById('expand2_left');
-        rightButtonMenu.click(function OnClickButton(){
+        rightButtonMenu.click(function OnClickButton() {
             animate({
-                duration:1000,
-                timing:function(timeFaction){
+                duration: 1500,
+                timing: function (timeFaction) {
                     return timeFaction;
                 },
-                draw:function(progress){
-                    lineOneRight.style.width = progress * 100 +'%';
-                    lineTwoLeft.style.width = progress * 100 +'%';
+                draw: function (progress) {
+                    lineOneRight.style.width = progress * 100 + '%';
+                    lineTwoLeft.style.width = progress * 100 + '%';
 
-                    if(progress==1){
+                    if (progress == 1) {
                         parentLineOne.style.backgroundColor = '#00d0ce';
                         parentLineTwo.style.backgroundColor = '#00d0ce';
                         lineOneRight.style.width = '0';
@@ -73,8 +73,8 @@ MainIndexControl.prototype = {
     MainControlAnimationStartPlay: function () {
 
     },
-    zIndexForAnimate:function(zIndex){
-        return zIndex+1;
+    zIndexForAnimate: function (zIndex) {
+        return zIndex + 1;
     },
     iframeSizeSet: function () {
         var iframe = $('#mainIframe').contents();
@@ -147,11 +147,11 @@ function TransportService() {
         this.request('POST', url, data, async, successHandler, errorHandler, completeHandler);
     }
 }
-function animate(options){
+function animate(options) {
     var start = performance.now();
 
     requestAnimationFrame(function animate(time) {
-        var timeFraction = (time - start) / options.duration ;
+        var timeFraction = (time - start) / options.duration;
         if (timeFraction > 1) timeFraction = 1;
         var progress = options.timing(timeFraction)
         options.draw(progress);
