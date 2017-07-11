@@ -21,21 +21,32 @@ MainIndexControl.prototype = {
     constructor: MainIndexControl,
     MainIndexControlCreateMenuTopControl: function () {
         var lineOneLeft = document.getElementById('expand_left');
+        var lineOneRight = document.getElementById('expand_right');
+
         var lineTwoRight = document.getElementById('expand2_right');
+        var lineTwoLeft = document.getElementById('expand2_left');
+
         var parentLineOne = document.getElementById('LoadingLineTop');
         var parentLineTwo = document.getElementById('LoadingLineBot');
-        var leftButtonMenu = $('#buttonMenuLeft');
-        leftButtonMenu.click(function OnClickButton() {
-            animate({
-                duration: 1500,
-                timing: function (timeFaction) {
-                    return timeFaction;
-                },
-                draw: function (progress) {
-                    lineOneLeft.style.width = progress * 100 + '%';
 
-                    lineTwoRight.style.width = progress * 100 + '%';
-                    if (progress == 1) {
+        var rightButtonMenu = document.getElementById('buttonRightMenu');
+        var leftButtonMenu = document.getElementById('buttonMenuLeft');
+
+        leftButtonMenu.onclick = function OnClickButton() {
+            leftButtonMenu.style.width = 17 +'%';
+            rightButtonMenu.style.width = 12 +'%';
+            lineOneRight.style.width = '0';
+            lineTwoLeft.style.width = '0';
+           animate({
+                duration:1000,
+                timing:function(timeFaction){
+                return timeFaction;
+                 },
+                draw:function(progress){
+                    lineOneLeft.style.width = progress * 100 +'%';
+
+                    lineTwoRight.style.width = progress * 100 +'%';
+                    if(progress==1){
                         parentLineOne.style.backgroundColor = '#279c9c';
                         parentLineTwo.style.backgroundColor = '#279c9c';
                         lineOneLeft.style.width = '0';
@@ -43,21 +54,24 @@ MainIndexControl.prototype = {
                     }
                 }
             });
-        });
-        var rightButtonMenu = $('#buttonRightMenu');
-        var lineOneRight = document.getElementById('expand_right');
-        var lineTwoLeft = document.getElementById('expand2_left');
-        rightButtonMenu.click(function OnClickButton() {
+
+            };
+
+        rightButtonMenu.onclick = function OnClickButton(){
+            rightButtonMenu.style.width = 17 +'%';
+            leftButtonMenu.style.width = 12 +'%';
+            lineTwoLeft.style.width = '0';
+            lineOneRight.style.width = '0';
             animate({
-                duration: 1500,
-                timing: function (timeFaction) {
+                duration:1000,
+                timing:function(timeFaction){
                     return timeFaction;
                 },
-                draw: function (progress) {
-                    lineOneRight.style.width = progress * 100 + '%';
-                    lineTwoLeft.style.width = progress * 100 + '%';
+                draw:function(progress){
+                    lineOneRight.style.width = progress * 100 +'%';
+                    lineTwoLeft.style.width = progress * 100 +'%';
 
-                    if (progress == 1) {
+                    if(progress==1){
                         parentLineOne.style.backgroundColor = '#00d0ce';
                         parentLineTwo.style.backgroundColor = '#00d0ce';
                         lineOneRight.style.width = '0';
@@ -65,16 +79,13 @@ MainIndexControl.prototype = {
                     }
                 }
             });
-        });
+        };
     },
-    MainControlAnimationMenu: function () {
+    MainControlMenu: function () {
 
     },
     MainControlAnimationStartPlay: function () {
 
-    },
-    zIndexForAnimate: function (zIndex) {
-        return zIndex + 1;
     },
     iframeSizeSet: function () {
         var iframe = $('#mainIframe').contents();
@@ -147,17 +158,16 @@ function TransportService() {
         this.request('POST', url, data, async, successHandler, errorHandler, completeHandler);
     }
 }
-function animate(options) {
+function animate(options){
     var start = performance.now();
 
     requestAnimationFrame(function animate(time) {
-        var timeFraction = (time - start) / options.duration;
+        var timeFraction = (time - start) / options.duration ;
         if (timeFraction > 1) timeFraction = 1;
         var progress = options.timing(timeFraction)
         options.draw(progress);
         if (timeFraction < 1) {
             requestAnimationFrame(animate);
         }
-
     });
 }
