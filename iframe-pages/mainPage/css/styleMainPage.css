@@ -144,7 +144,7 @@ img {
   display: inline-block;
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText {
-  background-color: dodgerblue;
+  background-color: #279c9c;
   margin-top: 5px;
   white-space: nowrap;
   width: 900px;
