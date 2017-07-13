@@ -32,6 +32,8 @@ MainIndexControl.prototype = {
         var rightButtonMenu = document.getElementById('buttonRightMenu');
         var leftButtonMenu = document.getElementById('buttonMenuLeft');
 
+        var cube = $('.cube');
+
         leftButtonMenu.onclick = function OnClickButton() {
             leftButtonMenu.style.width = 17 +'%';
             rightButtonMenu.style.width = 12 +'%';
@@ -46,9 +48,14 @@ MainIndexControl.prototype = {
                     lineOneLeft.style.width = progress * 100 +'%';
 
                     lineTwoRight.style.width = progress * 100 +'%';
+
+
+                    var  newCss = { '-webkit-transform': 'rotateX(' + progress * 90 + 'deg)'};
+                    cube.css(newCss);
+
                     if(progress==1){
-                        parentLineOne.style.backgroundColor = '#279c9c';
-                        parentLineTwo.style.backgroundColor = '#279c9c';
+                        parentLineOne.style.background = '#3BA1E4';
+                        parentLineTwo.style.background = '#3BA1E4';
                         lineOneLeft.style.width = '0';
                         lineTwoRight.style.width = '0';
                     }
@@ -62,6 +69,7 @@ MainIndexControl.prototype = {
             leftButtonMenu.style.width = 12 +'%';
             lineTwoLeft.style.width = '0';
             lineOneRight.style.width = '0';
+            var cube2= $('.cube');
             animate({
                 duration:1000,
                 timing:function(timeFaction){
@@ -71,9 +79,12 @@ MainIndexControl.prototype = {
                     lineOneRight.style.width = progress * 100 +'%';
                     lineTwoLeft.style.width = progress * 100 +'%';
 
+                    var  newCss = { '-webkit-transform': 'rotateX(' + progress * 1 + 'deg)'};
+                    cube2.css(newCss);
+
                     if(progress==1){
-                        parentLineOne.style.backgroundColor = '#00d0ce';
-                        parentLineTwo.style.backgroundColor = '#00d0ce';
+                        parentLineOne.style.background = '#8FCBF2';
+                        parentLineTwo.style.background = '#8FCBF2';
                         lineOneRight.style.width = '0';
                         lineTwoLeft.style.width = '0';
                     }
