@@ -32,13 +32,12 @@ MainIndexControl.prototype = {
         var rightButtonMenu = document.getElementById('buttonRightMenu');
         var leftButtonMenu = document.getElementById('buttonMenuLeft');
 
-        var cube = $('.cube');
-
         leftButtonMenu.onclick = function OnClickButton() {
             leftButtonMenu.style.width = 17 +'%';
             rightButtonMenu.style.width = 12 +'%';
             lineOneRight.style.width = '0';
             lineTwoLeft.style.width = '0';
+            var cube = $('.cube');
            animate({
                 duration:1000,
                 timing:function(timeFaction){
@@ -50,18 +49,19 @@ MainIndexControl.prototype = {
                     lineTwoRight.style.width = progress * 100 +'%';
 
 
-                    var  newCss = { '-webkit-transform': 'rotateX(' + progress * 90 + 'deg)'};
+                    var  newCss = { '-webkit-transform': 'rotateX(' + progress *90 + 'deg)'};
                     cube.css(newCss);
+
 
                     if(progress==1){
                         parentLineOne.style.background = '#3BA1E4';
                         parentLineTwo.style.background = '#3BA1E4';
                         lineOneLeft.style.width = '0';
                         lineTwoRight.style.width = '0';
+
                     }
                 }
             });
-
             };
 
         rightButtonMenu.onclick = function OnClickButton(){
@@ -79,8 +79,9 @@ MainIndexControl.prototype = {
                     lineOneRight.style.width = progress * 100 +'%';
                     lineTwoLeft.style.width = progress * 100 +'%';
 
-                    var  newCss = { '-webkit-transform': 'rotateX(' + progress * 1 + 'deg)'};
+                    var  newCss = { '-webkit-transform': 'rotateX(' + -progress * 90 + 'deg)'};
                     cube2.css(newCss);
+
 
                     if(progress==1){
                         parentLineOne.style.background = '#8FCBF2';
