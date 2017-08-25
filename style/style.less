@@ -45,7 +45,8 @@ body{
     width: 100%;
     height: 100%;
     position: relative;
-
+    border-bottom: 2px solid @primary-color;
+    box-sizing: border-box;
     #topLine{
       width: 100%;
       height: 5%;
@@ -54,6 +55,7 @@ body{
         height: 100%;
         position: relative;
         background-color: @primary-color;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
       }
     }
 
@@ -124,6 +126,7 @@ body{
                 float: right;
                 width: 45%;
                 height: 100%;
+                box-shadow: 0 5px 10px 0 rgba(0,0,0,0.38);
                 background-color: @primary-color;
                 min-width: 220px;
                 box-sizing: border-box;
@@ -185,6 +188,7 @@ body{
       width: 100%;
       height: 22px;
       #lineInner{
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
         width: 20%;
         height: 100%;
         position: relative;
@@ -281,10 +285,11 @@ body{
           }
 
         }
+
         #buttonMenuLeft{
           float: left;
           background-color: @primary-color;
-          width: 12%;
+          width: 200px;
           height: 100%;
           cursor: pointer;
           font-size: 20px;
@@ -292,6 +297,7 @@ body{
           line-height: 40px;
           transition: 1s;
           transition-timing-function: linear;
+          box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.2);
           #triangle_Buttons_left{
             float: right;
             width: 0;
@@ -313,6 +319,7 @@ body{
           line-height: 40px;
           transition: 1s;
           transition-timing-function: linear;
+          box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.2);
           #triangle_Buttons_Right{
             float: left;
             width: 0;
@@ -418,6 +425,7 @@ body{
 #footer{
   width: 100%;
   height: 100px;
+  border-top: 3px solid @primary-color;
     #centre_bottom{
       width: 60%;
       height: 100%;

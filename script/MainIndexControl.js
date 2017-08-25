@@ -20,6 +20,7 @@ function MainIndexControl(options) {
 MainIndexControl.prototype = {
     constructor: MainIndexControl,
     MainIndexControlCreateMenuTopControl: function () {
+
         var lineOneLeft = document.getElementById('expand_left');
         var lineOneRight = document.getElementById('expand_right');
 
@@ -37,7 +38,6 @@ MainIndexControl.prototype = {
             rightButtonMenu.style.width = 12 +'%';
             lineOneRight.style.width = '0';
             lineTwoLeft.style.width = '0';
-            var cube = $('.cube');
            animate({
                 duration:1000,
                 timing:function(timeFaction){
@@ -49,8 +49,6 @@ MainIndexControl.prototype = {
                     lineTwoRight.style.width = progress * 100 +'%';
 
 
-                    var  newCss = { '-webkit-transform': 'rotateX(' + progress *90 + 'deg)'};
-                    cube.css(newCss);
 
 
                     if(progress==1){
@@ -69,7 +67,6 @@ MainIndexControl.prototype = {
             leftButtonMenu.style.width = 12 +'%';
             lineTwoLeft.style.width = '0';
             lineOneRight.style.width = '0';
-            var cube2= $('.cube');
             animate({
                 duration:1000,
                 timing:function(timeFaction){
@@ -79,8 +76,6 @@ MainIndexControl.prototype = {
                     lineOneRight.style.width = progress * 100 +'%';
                     lineTwoLeft.style.width = progress * 100 +'%';
 
-                    var  newCss = { '-webkit-transform': 'rotateX(' + -progress * 90 + 'deg)'};
-                    cube2.css(newCss);
 
 
                     if(progress==1){

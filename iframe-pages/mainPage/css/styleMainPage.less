@@ -14,6 +14,17 @@ img {
     width: 100%;
     height: 100%;
     position: relative;
+    background: rgba(255,250,250,0.78);
+    #center{
+        position: absolute;
+        width: 1000px;
+        height: 100%;
+        left: 50%;
+        margin-left: -500px;
+        border-left: 3px solid #8FCBF2 ;
+        border-right: 3px solid #8FCBF2;
+        box-shadow: 0px 6px 39px 14px rgba(0,0,0,0.35);
+    }
     
 }
 #footer {
@@ -21,7 +32,7 @@ img {
 }
 .slider {
     width:100%;
-    min-width:985px;
+    min-width:1000px;
     height:400px;
     position:relative;
     overflow:hidden;
@@ -29,25 +40,25 @@ img {
     text-align:center;
 }
 .slider .bd {
-    width:985px;
+    width:1005px;
     position:absolute;
     left:50%;
-    margin-left:-490px
+    margin-left:-500px
 }
 .slider .bd li {
-    width:985px;
+    width:1005px;
     overflow:hidden;
 }
 .slider .bd li img {
     display:block;
-    width:985px;
+    width:1005px;
     height:400px;
 }
 .slider .tempWrap {
     overflow:visible !important
 }
 .slider .tempWrap ul {
-    margin-left:-995px !important;
+    margin-left:-1005px !important;
 }
 .slider .hd {
     position:absolute;
@@ -87,11 +98,11 @@ img {
 }
 .slider .prev {
     left:-50%;
-    margin-left:-500px;
+    margin-left:-499px;
 }
 .slider .next {
     left:50%;
-    margin-left:485px;
+    margin-left:504px;
 }
 .slider .pnBtn .blackBg {
     display:block;
@@ -127,12 +138,14 @@ img {
 #newsBlock{
     margin-top: 40px;
     width: 100%;
+    margin-bottom: 50px;
     #newsBlockInner{
-        width: 990px;
+        width: 1000px;
         position: relative;
         margin: 0 auto;
         .newsBlockRows{
             width: 100%;
+            margin-left: 20px;
             .newsRow{
                 position: relative;
                 width: 100%;
