@@ -152,12 +152,13 @@ img {
   position: relative;
   width: 100%;
   min-height: 50px;
-  color: white;
+  color: black;
   cursor: pointer;
   display: inline-block;
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText {
-  background-color: #3BA1E4;
+  background-color: white;
+  border: 1px solid darkgray;
   margin-top: 5px;
   white-space: nowrap;
   width: 900px;
@@ -170,6 +171,7 @@ img {
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText .headNews {
   font-size: 20px;
   font-weight: 600;
+  text-decoration: underline;
 }
 #newsBlock #newsBlockInner .newsBlockRows .newsRow .newsCellText .text {
   font-size: 12px;
