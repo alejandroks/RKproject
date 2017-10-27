@@ -33,9 +33,12 @@ MainIndexControl.prototype = {
         var rightButtonMenu = document.getElementById('buttonRightMenu');
         var leftButtonMenu = document.getElementById('buttonMenuLeft');
 
+        var circle_Buttons_left = document.getElementById('circle_Buttons_left');
+        var circleButtonsRight = document.getElementById('circle_buttons_right');
+
         leftButtonMenu.onclick = function OnClickButton() {
-            leftButtonMenu.style.width = 17 +'%';
-            rightButtonMenu.style.width = 12 +'%';
+            circle_Buttons_left.style.backgroundColor= "#FFB040";
+            circleButtonsRight.style.background = 'white';
             lineOneRight.style.width = '0';
             lineTwoLeft.style.width = '0';
            animate({
@@ -52,8 +55,8 @@ MainIndexControl.prototype = {
 
 
                     if(progress==1){
-                        parentLineOne.style.background = '#3BA1E4';
-                        parentLineTwo.style.background = '#3BA1E4';
+                        parentLineOne.style.background = '#696969';
+                        parentLineTwo.style.background = '#696969';
                         lineOneLeft.style.width = '0';
                         lineTwoRight.style.width = '0';
 
@@ -63,8 +66,8 @@ MainIndexControl.prototype = {
             };
 
         rightButtonMenu.onclick = function OnClickButton(){
-            rightButtonMenu.style.width = 17 +'%';
-            leftButtonMenu.style.width = 12 +'%';
+            circleButtonsRight.style.background = '#696969';
+            circle_Buttons_left.style.backgroundColor= "white";
             lineTwoLeft.style.width = '0';
             lineOneRight.style.width = '0';
             animate({
@@ -79,8 +82,8 @@ MainIndexControl.prototype = {
 
 
                     if(progress==1){
-                        parentLineOne.style.background = '#8FCBF2';
-                        parentLineTwo.style.background = '#8FCBF2';
+                        parentLineOne.style.background = '#FFB040';
+                        parentLineTwo.style.background = '#FFB040';
                         lineOneRight.style.width = '0';
                         lineTwoLeft.style.width = '0';
                     }
