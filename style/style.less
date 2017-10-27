@@ -1,5 +1,5 @@
-@primary-color:#8FCBF2;
-@secondary-accent-color:#3BA1E4;
+@primary-color:#FFB040;
+@secondary-accent-color:#696969;
 @border-line-color:white;
 @background-color-primary:#F0FFF0;
 //#279c9c; #00d0ce
@@ -50,12 +50,13 @@ body{
     #topLine{
       width: 100%;
       height: 5%;
+      box-shadow: 0px 5px 0px -1px rgba(0,0,0,0.6);
       #innerLine{
         width: 100%;
         height: 100%;
         position: relative;
         background-color: @primary-color;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
       }
     }
 
@@ -126,7 +127,7 @@ body{
                 float: right;
                 width: 45%;
                 height: 100%;
-                box-shadow: 0 5px 10px 0 rgba(0,0,0,0.38);
+                box-shadow: 0px 5px 0px -1px rgba(0,0,0,0.6);
                 background-color: @primary-color;
                 min-width: 220px;
                 box-sizing: border-box;
@@ -298,14 +299,11 @@ body{
           transition: 1s;
           transition-timing-function: linear;
           box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.2);
-          #triangle_Buttons_left{
+          #circle_Buttons_left{
             float: right;
             width: 0;
             content: "";
             height: 0;
-            border-top: 42px solid @primary-color;
-            border-right: 25px solid transparent;
-            margin-right: -25px;
           }
         }
         #buttonRightMenu{
@@ -320,29 +318,29 @@ body{
           transition: 1s;
           transition-timing-function: linear;
           box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.2);
-          #triangle_Buttons_Right{
+          #circle_Buttons_Right{
             float: left;
             width: 0;
             content: "";
             height: 0;
-            border-bottom: 42px solid @primary-color;
-            border-left: 25px solid transparent;
-            margin-left: -25px;
           }
         }
       }
     }
     #menuUl{
       width: 100%;
-      height: 50px;
+      height: 80px;
       position: absolute;
-      margin-top: 50px;
+      bottom: 0px;
+
       #innerMenuUl{
         width: 100%;
         height: 100%;
         position: relative;
         .parentMenu{
         text-align: center;
+          height: 72px;
+          background: rgba(0, 0, 0,0.8);
           &:before{
             content: '';
             display: inline-block;
@@ -353,18 +351,22 @@ body{
         #menu{
           display: inline-block;
           vertical-align: middle;
+          height:72px;
           ul{
-            height: 44px;
-            background-color: red;
+            height:72px;
             li{
               float: left;
               width: 200px;
               cursor: pointer;
               height: 100%;
-              background-color: @secondary-accent-color;
               font-size: 16px;
               text-align: center;
-              line-height: 46px;
+              line-height: 72px;
+              color: white;
+              &:hover{
+                background-color: @primary-color;
+                color: black;
+              }
             }
           }
         }

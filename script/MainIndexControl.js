@@ -6,7 +6,7 @@ function MainIndexControl(options) {
 
     selfRef.MainIndexControlCreateMenuTopControl();
     selfRef.iframeSizeSet();
-    createMenuUl({Text:"TestMenuUL"});
+    //createMenuUl({Text:"TestMenuUL"});
     this.sendRequest({
         args: {
             'cmdName': 'getData'
@@ -182,7 +182,13 @@ function createMenuUl(options){
     var menuUlParent = document.getElementById('menu');
     var ul = document.createElement('ul');
     var li = document.createElement('li');
+    var ul1 = document.createElement('ul');
+    var li1 = document.createElement('li');
+    var ul2 = document.createElement('ul');
+    var li2 = document.createElement('li');
     li.innerHTML = options.Text;
+    li1.innerHTML = options.Text;
+    li2.innerHTML = options.Text;
     ul.appendChild(li);
     menuUlParent.appendChild(ul);
 }
