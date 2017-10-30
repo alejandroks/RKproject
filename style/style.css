@@ -425,22 +425,24 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: red;
+  box-shadow: 0px -5px 0px 0px rgba(0, 0, 0, 0.75);
 }
 #footer #innerFooter #footerInform {
-  width: 100%;
-  height: 200px;
   background-color: #ffb040;
+  width: 100%;
+  height: 100px;
 }
 #footer #innerFooter #basement {
   position: relative;
   width: 100%;
-  height: 50px;
+  height: 25px;
+  box-shadow: inset 0px 7px 14px 0px rgba(0, 0, 0, 0.56);
   background-color: #696969;
   margin-top: -10px;
 }
 #footer #innerFooter #basement #text {
-  font-size: 50px;
+  color: white;
+  font-size: 20px;
 }
 ::-webkit-scrollbar {
   width: 5px;
