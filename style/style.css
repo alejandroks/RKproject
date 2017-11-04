@@ -290,16 +290,22 @@ body {
 #header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft {
   float: left;
   background-color: rgba(0, 0, 0, 0.85);
-  width: 15%;
+  width: 14%;
   height: 100%;
   cursor: pointer;
   font-size: 20px;
-  text-align: right;
-  line-height: 40px;
   transition: 1s;
+  position: relative;
   transition-timing-function: linear;
-  color: white;
   box-shadow: 1px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+#header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft {
+  position: absolute;
+  margin-left: 25%;
+  height: 100%;
+  color: white;
+  line-height: 40px;
+  text-align: center;
 }
 #header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft #circle_buttons_left {
   float: right;
@@ -312,17 +318,24 @@ body {
   margin-right: -21px;
 }
 #header #innerHeader #menuButtons #innerMenuButtons #buttonRightMenu {
+  position: relative;
   float: right;
   background-color: rgba(255, 176, 64, 0.9);
-  width: 15%;
+  width: 14%;
   height: 100%;
-  cursor: pointer;
   font-size: 20px;
-  text-align: left;
-  line-height: 40px;
+  cursor: pointer;
   transition: 1s;
   transition-timing-function: linear;
   box-shadow: 1px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+#header #innerHeader #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight {
+  position: absolute;
+  margin-left: 34%;
+  height: 100%;
+  color: white;
+  line-height: 40px;
+  text-align: center;
 }
 #header #innerHeader #menuButtons #innerMenuButtons #buttonRightMenu #circle_buttons_right {
   float: left;
@@ -441,6 +454,51 @@ body {
   background-color: #ffb040;
   width: 100%;
   height: 100px;
+  position: relative;
+}
+#footer #innerFooter #footerInform #InformFooterBox {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  margin-top: 22px;
+}
+#footer #innerFooter #footerInform #InformFooterBox #firstInfoBox {
+  float: left;
+  width: 300px;
+  height: 100%;
+  color: black;
+  font-size: 14px;
+  background-color: royalblue;
+}
+#footer #innerFooter #footerInform #InformFooterBox #firstInfoBox img {
+  float: left;
+  width: 50px;
+  height: 100%;
+}
+#footer #innerFooter #footerInform #InformFooterBox #SecondInfoBox {
+  float: left;
+  width: 300px;
+  height: 100%;
+  color: black;
+  font-size: 14px;
+  background-color: yellow;
+}
+#footer #innerFooter #footerInform #InformFooterBox #thirdInfoBox {
+  float: left;
+  width: 300px;
+  height: 100%;
+  color: black;
+  font-size: 14px;
+  background-color: green;
+}
+#footer #innerFooter #footerInform #InformFooterBox #fourthInfoBox {
+  float: left;
+  width: 300px;
+  height: 100%;
+  color: black;
+  font-size: 14px;
+  background-color: purple;
 }
 #footer #innerFooter #basement {
   position: relative;

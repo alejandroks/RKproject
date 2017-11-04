@@ -297,16 +297,21 @@ body{
         #buttonMenuLeft{
           float: left;
           background-color: rgba(0,0,0,0.85);
-          width: 15%;
+          width: 14%;
           height: 100%;
           cursor: pointer;
           font-size: 20px;
-          text-align: right;
-
-          line-height: 40px;
           transition: 1s;
+          position: relative;
           transition-timing-function: linear;
-          color: white;
+          #textForMenuLeft{
+            position: absolute;
+            margin-left: 25%;
+            height: 100%;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+          }
           box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.2);
           #circle_buttons_left{
             float: right;
@@ -320,17 +325,24 @@ body{
           }
         }
         #buttonRightMenu{
+          position: relative;
           float: right;
           background-color: rgba(255,176,64,0.9);
-          width: 15%;
+          width: 14%;
           height: 100%;
-          cursor: pointer;
           font-size: 20px;
-          text-align: left;
-          line-height: 40px;
+          cursor: pointer;
           transition: 1s;
           transition-timing-function: linear;
           box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.2);
+          #textForMenuRight{
+            position: absolute;
+            margin-left: 34%;
+            height: 100%;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+          }
           #circle_buttons_right{
             float: left;
             width: 42px;
@@ -452,6 +464,51 @@ body{
         background-color:@primary-color;
         width: 100%;
         height: 100px;
+        position: relative;
+        #InformFooterBox{
+          width: 100%;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+          margin-top: 22px;
+            #firstInfoBox{
+              float: left;
+              img{
+                float: left;
+                width: 50px;
+                height: 100%;
+              }
+              width: 300px;
+              height: 100%;
+              color: black;
+              font-size: 14px;
+              background-color: royalblue;
+            }
+            #SecondInfoBox{
+              float: left;
+              width: 300px;
+              height: 100%;
+              color: black;
+              font-size: 14px;
+              background-color: yellow;
+            }
+          #thirdInfoBox{
+            float: left;
+            width: 300px;
+            height: 100%;
+            color: black;
+            font-size: 14px;
+            background-color: green;
+          }
+          #fourthInfoBox{
+            float: left;
+            width: 300px;
+            height: 100%;
+            color: black;
+            font-size: 14px;
+            background-color: purple;
+          }
+        }
       }
       #basement{
         position: relative;
