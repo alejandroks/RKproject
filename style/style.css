@@ -87,7 +87,8 @@ body {
   margin: 0 auto;
   background-color: #ffb040;
   color: white;
-  font-size: 52px;
+  line-height: 55px;
+  font-size: 3.5vw;
   border-top: 1px solid white;
   box-sizing: border-box;
   text-align: center;
@@ -290,10 +291,10 @@ body {
 #header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft {
   float: left;
   background-color: rgba(0, 0, 0, 0.85);
-  width: 14%;
+  width: 200px;
   height: 100%;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 21px;
   transition: 1s;
   position: relative;
   transition-timing-function: linear;
@@ -301,9 +302,10 @@ body {
 }
 #header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft {
   position: absolute;
-  margin-left: 25%;
+  margin-right: 20%;
   height: 100%;
   color: white;
+  right: 0;
   line-height: 40px;
   text-align: center;
 }
@@ -321,9 +323,9 @@ body {
   position: relative;
   float: right;
   background-color: rgba(255, 176, 64, 0.9);
-  width: 14%;
+  width: 200px;
   height: 100%;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
   transition: 1s;
   transition-timing-function: linear;
@@ -460,45 +462,62 @@ body {
   width: 100%;
   height: 50px;
   position: absolute;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.9);
   margin-top: 22px;
 }
-#footer #innerFooter #footerInform #InformFooterBox #firstInfoBox {
-  float: left;
-  width: 300px;
+#footer #innerFooter #footerInform #InformFooterBox #inner {
+  position: relative;
+  width: 90%;
   height: 100%;
-  color: black;
-  font-size: 14px;
-  background-color: royalblue;
+  margin: 0 auto;
+  color: Lavender;
 }
-#footer #innerFooter #footerInform #InformFooterBox #firstInfoBox img {
+#footer #innerFooter #footerInform #InformFooterBox #inner #firstInfoBox {
+  box-sizing: border-box;
+  float: left;
+  width: 20%;
+  height: 100%;
+  font-size: 14px;
+  border-right: 1px solid #ffb040;
+  border-left: 1px solid #ffb040;
+}
+#footer #innerFooter #footerInform #InformFooterBox #inner #firstInfoBox img {
   float: left;
   width: 50px;
   height: 100%;
 }
-#footer #innerFooter #footerInform #InformFooterBox #SecondInfoBox {
+#footer #innerFooter #footerInform #InformFooterBox #inner #SecondInfoBox {
+  box-sizing: border-box;
   float: left;
-  width: 300px;
+  width: 20%;
   height: 100%;
-  color: black;
   font-size: 14px;
-  background-color: yellow;
+  border-left: 1px solid #ffb040;
 }
-#footer #innerFooter #footerInform #InformFooterBox #thirdInfoBox {
+#footer #innerFooter #footerInform #InformFooterBox #inner #thirdInfoBox {
+  box-sizing: border-box;
   float: left;
-  width: 300px;
+  width: 20%;
   height: 100%;
-  color: black;
   font-size: 14px;
-  background-color: green;
+  border-left: 1px solid #ffb040;
 }
-#footer #innerFooter #footerInform #InformFooterBox #fourthInfoBox {
+#footer #innerFooter #footerInform #InformFooterBox #inner #fourthInfoBox {
+  box-sizing: border-box;
   float: left;
-  width: 300px;
+  width: 20%;
   height: 100%;
-  color: black;
   font-size: 14px;
-  background-color: purple;
+  border-left: 1px solid #ffb040;
+}
+#footer #innerFooter #footerInform #InformFooterBox #inner #fifthInfoBox {
+  box-sizing: border-box;
+  float: left;
+  width: 20%;
+  height: 100%;
+  font-size: 14px;
+  border-right: 1px solid #ffb040;
+  border-left: 1px solid #ffb040;
 }
 #footer #innerFooter #basement {
   position: relative;

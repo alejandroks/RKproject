@@ -66,7 +66,7 @@ MainIndexControl.prototype = {
             };
 
         rightButtonMenu.onclick = function OnClickButton(){
-            circleButtonsRight.style.background = 'FFFFF';
+            circleButtonsRight.style.backgroundColor = 'black';
             circle_Buttons_left.style.backgroundColor= "white";
             lineTwoLeft.style.width = '0';
             lineOneRight.style.width = '0';
