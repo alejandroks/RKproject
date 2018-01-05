@@ -6,6 +6,7 @@ function MainIndexControl(options) {
 
     selfRef.MainIndexControlCreateMenuTopControl();
     selfRef.iframeSizeSet();
+    selfRef.MainControlMenu();
     //createMenuUl({Text:"TestMenuUL"});
     this.sendRequest({
         args: {
@@ -36,11 +37,15 @@ MainIndexControl.prototype = {
         var circle_Buttons_left = document.getElementById('circle_Buttons_left');
         var circleButtonsRight = document.getElementById('circle_buttons_right');
 
+        var menuInformation = document.getElementById('menuInformation');
+        var menuServices = document.getElementById('menuServices');
+
         leftButtonMenu.onclick = function OnClickButton() {
             circle_Buttons_left.style.backgroundColor= "#FFB040";
             circleButtonsRight.style.background = 'white';
             lineOneRight.style.width = '0';
             lineTwoLeft.style.width = '0';
+
            animate({
                 duration:1000,
                 timing:function(timeFaction){
@@ -59,7 +64,8 @@ MainIndexControl.prototype = {
                         parentLineTwo.style.background = '#696969';
                         lineOneLeft.style.width = '0';
                         lineTwoRight.style.width = '0';
-
+                        menuInformation.style.visibility= 'visible';
+                        menuServices.style.visibility= 'hidden';
                     }
                 }
             });
@@ -86,6 +92,8 @@ MainIndexControl.prototype = {
                         parentLineTwo.style.background = '#FFB040';
                         lineOneRight.style.width = '0';
                         lineTwoLeft.style.width = '0';
+                        menuInformation.style.visibility= 'hidden';
+                        menuServices.style.visibility= 'visible';
                     }
                 }
             });
@@ -93,9 +101,7 @@ MainIndexControl.prototype = {
     },
     MainControlMenu: function () {
 
-    },
-    MainControlAnimationStartPlay: function () {
-
+        menyHolder();
     },
     iframeSizeSet: function () {
         var iframe = $('#mainIframe').contents();
@@ -181,17 +187,26 @@ function animate(options){
         }
     });
 }
-function createMenuUl(options){
-    var menuUlParent = document.getElementById('menu');
-    var ul = document.createElement('ul');
-    var li = document.createElement('li');
-    var ul1 = document.createElement('ul');
-    var li1 = document.createElement('li');
-    var ul2 = document.createElement('ul');
-    var li2 = document.createElement('li');
-    li.innerHTML = options.Text;
-    li1.innerHTML = options.Text;
-    li2.innerHTML = options.Text;
-    ul.appendChild(li);
-    menuUlParent.appendChild(ul);
+function menyHolder(){
+
+
+    var menuJS = document.getElementById('menuUl');
+    var menuJSClientHeight = menuJS.clientHeight;
+
+    var inner_header = document.getElementById('innerHeader');
+    var inner_headerClientHeight = inner_header.clientHeight;
+
+    window.onscroll  = function(){
+      var top = window.pageYOffset || document.documentElement.scrollTop;
+        if(top>= inner_headerClientHeight - menuJSClientHeight){
+            menuJS.style.position = 'fixed';
+            menuJS.style.top = '0';
+        }
+        if(top< inner_headerClientHeight - menuJSClientHeight){
+            menuJS.style.position = 'absolute';
+            menuJS.style.top = '';
+            menuJS.style.bottom = '0';
+        }
+    };
+
 }

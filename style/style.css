@@ -16,11 +16,11 @@ html {
   display: block;
 }
 @font-face {
-  font-family: mob1;
+  font-family: mob2;
   src: url(../imageAndLogo/mob2.otf);
 }
 @font-face {
-  font-family: mob2;
+  font-family: mob;
   src: url(../imageAndLogo/mob.otf);
 }
 aside,
@@ -31,7 +31,7 @@ section {
   display: block;
 }
 body {
-  font-family: mob1;
+  font-family: mob2;
   width: 100%;
   height: 100%;
   min-width: 1000px;
@@ -68,7 +68,7 @@ body {
 #header #innerHeader #logoAndSearch {
   width: 100%;
   height: 55px;
-  font-family: mob2;
+  font-family: mob;
 }
 #header #innerHeader #logoAndSearch #innerLogoAndSearch {
   width: 100%;
@@ -316,7 +316,7 @@ body {
   border: 1px solid #ffb040;
   height: 40px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #ffb040;
   margin-right: -21px;
 }
 #header #innerHeader #menuButtons #innerMenuButtons #buttonRightMenu {
@@ -354,6 +354,7 @@ body {
   height: 80px;
   position: absolute;
   bottom: 0px;
+  z-index: 1000;
 }
 #header #innerHeader #menuUl #innerMenuUl {
   width: 100%;
@@ -361,27 +362,23 @@ body {
   position: relative;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu {
-  text-align: center;
   height: 72px;
   background: rgba(0, 0, 0, 0.85);
 }
-#header #innerHeader #menuUl #innerMenuUl .parentMenu:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em;
-  /* Сдвиг */
-}
-#header #innerHeader #menuUl #innerMenuUl .parentMenu #menu {
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation {
+  visibility: visible;
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
   display: inline-block;
   vertical-align: middle;
   height: 72px;
 }
-#header #innerHeader #menuUl #innerMenuUl .parentMenu #menu ul {
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul {
+  position: relative;
   height: 72px;
 }
-#header #innerHeader #menuUl #innerMenuUl .parentMenu #menu ul li {
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul li {
   float: left;
   width: 200px;
   cursor: pointer;
@@ -391,7 +388,34 @@ body {
   line-height: 72px;
   color: #ffb040;
 }
-#header #innerHeader #menuUl #innerMenuUl .parentMenu #menu ul li:hover {
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul li:hover {
+  background-color: #ffb040;
+  color: black;
+}
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices {
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 72px;
+}
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul {
+  position: relative;
+  height: 72px;
+}
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li {
+  float: left;
+  width: 200px;
+  cursor: pointer;
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 72px;
+  color: #ffb040;
+}
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li:hover {
   background-color: #ffb040;
   color: black;
 }
@@ -462,7 +486,6 @@ body {
   width: 100%;
   height: 50px;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
   margin-top: 22px;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner {
@@ -470,7 +493,7 @@ body {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  color: Lavender;
+  color: black;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #firstInfoBox {
   box-sizing: border-box;
@@ -478,8 +501,8 @@ body {
   width: 20%;
   height: 100%;
   font-size: 14px;
-  border-right: 1px solid #ffb040;
-  border-left: 1px solid #ffb040;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #firstInfoBox img {
   float: left;
@@ -492,7 +515,6 @@ body {
   width: 20%;
   height: 100%;
   font-size: 14px;
-  border-left: 1px solid #ffb040;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #thirdInfoBox {
   box-sizing: border-box;
@@ -500,7 +522,7 @@ body {
   width: 20%;
   height: 100%;
   font-size: 14px;
-  border-left: 1px solid #ffb040;
+  border-left: 1px solid black;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #fourthInfoBox {
   box-sizing: border-box;
@@ -508,7 +530,7 @@ body {
   width: 20%;
   height: 100%;
   font-size: 14px;
-  border-left: 1px solid #ffb040;
+  border-left: 1px solid black;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #fifthInfoBox {
   box-sizing: border-box;
@@ -516,8 +538,7 @@ body {
   width: 20%;
   height: 100%;
   font-size: 14px;
-  border-right: 1px solid #ffb040;
-  border-left: 1px solid #ffb040;
+  border-left: 1px solid black;
 }
 #footer #innerFooter #basement {
   position: relative;

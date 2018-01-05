@@ -3,9 +3,17 @@
     padding:0;
     list-style:none;
 }
+@font-face {
+    font-family: mob2;
+    src: url(../images/mob2.otf);
+}
+@font-face {
+    font-family: mob;
+    src: url(../images/mob.otf);
+}
 body {
-    font:normal 12px/22px  Arial, Helvetica, sans-serif;
     width:100%;
+    font-family: mob2;
 }
 img {
     border:0;
@@ -33,7 +41,7 @@ img {
 .slider {
     width:100%;
     min-width:1000px;
-    height:400px;
+    height:520px;
     position:relative;
     overflow:hidden;
     background:#fff;
@@ -52,7 +60,7 @@ img {
 .slider .bd li img {
     display:block;
     width:1005px;
-    height:400px;
+    height:520px;
 }
 .slider .tempWrap {
     overflow:visible !important
@@ -93,7 +101,7 @@ img {
     z-index:1;
     top:0;
     width:100%;
-    height:400px;
+    height:520px;
     cursor:pointer;
 }
 .slider .prev {
@@ -110,7 +118,7 @@ img {
     left:0;
     top:0;
     width:100%;
-    height:400px;
+    height:520px;
     background:black;
     filter:alpha(opacity=80);
     opacity:0.75;
@@ -165,12 +173,13 @@ img {
                     white-space: normal;
                     }
                     .headNews{
-                        font-size: 20px;
-                        font-weight: 600;
-                        text-decoration: underline;
+                        font-family: mob;
+                        font-size: 25px;
+                       font-weight: 100;
+                        //text-decoration: underline;
                     }
                     .text{
-                        font-size: 12px;
+                        font-size: 15px;
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
