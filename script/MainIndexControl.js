@@ -31,18 +31,17 @@ MainIndexControl.prototype = {
         var parentLineOne = document.getElementById('LoadingLineTop');
         var parentLineTwo = document.getElementById('LoadingLineBot');
 
-        var rightButtonMenu = document.getElementById('buttonRightMenu');
         var leftButtonMenu = document.getElementById('buttonMenuLeft');
+        var rightButtonMenu = document.getElementById('buttonRightMenu');
 
-        var circle_Buttons_left = document.getElementById('circle_Buttons_left');
-        var circleButtonsRight = document.getElementById('circle_buttons_right');
+
 
         var menuInformation = document.getElementById('menuInformation');
         var menuServices = document.getElementById('menuServices');
 
         leftButtonMenu.onclick = function OnClickButton() {
-            circle_Buttons_left.style.backgroundColor= "#FFB040";
-            circleButtonsRight.style.background = 'white';
+
+
             lineOneRight.style.width = '0';
             lineTwoLeft.style.width = '0';
 
@@ -60,8 +59,8 @@ MainIndexControl.prototype = {
 
 
                     if(progress==1){
-                        parentLineOne.style.background = '#696969';
-                        parentLineTwo.style.background = '#696969';
+                        parentLineOne.style.background = '#3CB371';
+                        parentLineTwo.style.background = '#3CB371';
                         lineOneLeft.style.width = '0';
                         lineTwoRight.style.width = '0';
                         menuInformation.style.visibility= 'visible';
@@ -72,8 +71,7 @@ MainIndexControl.prototype = {
             };
 
         rightButtonMenu.onclick = function OnClickButton(){
-            circleButtonsRight.style.backgroundColor = 'black';
-            circle_Buttons_left.style.backgroundColor= "white";
+
             lineTwoLeft.style.width = '0';
             lineOneRight.style.width = '0';
             animate({

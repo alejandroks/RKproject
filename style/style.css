@@ -35,7 +35,7 @@ body {
   width: 100%;
   height: 100%;
   min-width: 1000px;
-  background-image: url(../imageAndLogo/123.png);
+  background-image: url(../imageAndLogo/12.jpg);
 }
 #wrapper {
   width: 100%;
@@ -45,7 +45,7 @@ body {
 }
 #header {
   width: 100%;
-  height: 300px;
+  height: 250px;
 }
 #header #innerHeader {
   width: 100%;
@@ -62,8 +62,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #ffb040;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #26972d;
 }
 #header #innerHeader #logoAndSearch {
   width: 100%;
@@ -85,11 +84,11 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: #ffb040;
+  background-color: #26972d;
   color: white;
   line-height: 55px;
   font-size: 3.5vw;
-  border-top: 1px solid white;
+  border-top: 1px solid #ffb040;
   box-sizing: border-box;
   text-align: center;
 }
@@ -98,7 +97,7 @@ body {
   content: "";
   width: 0;
   height: 0;
-  border-top: 55px solid #ffb040;
+  border-top: 55px solid #26972d;
   border-left: 40px solid transparent;
   margin-left: -40px;
 }
@@ -107,87 +106,110 @@ body {
   content: "";
   width: 0;
   height: 0;
-  border-top: 55px solid #ffb040;
+  border-top: 55px solid #26972d;
   border-right: 40px solid transparent;
   margin-right: -40px;
 }
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search {
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons {
   width: 100%;
-  height: 100%;
   position: absolute;
 }
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock {
-  width: 40%;
-  height: 100%;
-  float: right;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch {
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons {
   width: 100%;
   height: 100%;
   position: relative;
 }
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #rectangleForSearch {
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft {
+  float: left;
+  width: 200px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 21.5px;
+  position: relative;
+  transition-timing-function: linear;
+  background-color: #26972d;
+  color: white;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft {
+  position: absolute;
+  margin-right: 20%;
+  height: 100%;
+  right: 0;
+  line-height: 55px;
+  text-align: center;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft #underline-left {
+  height: 38px;
+  border-bottom: 1px white solid;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft #underline-left:hover {
+  border-bottom-color: #ffb040;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #forPNGLeft {
+  position: absolute;
+  margin-top: 12px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #forPNGLeft img {
+  width: 100%;
+  height: 100%;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #left-button-triangle {
   float: right;
   content: "";
   width: 0;
   height: 0;
-  border-top: 55px solid #ffb040;
-  border-left: 55px solid transparent;
+  border-top: 55px solid #26972d;
+  border-right: 40px solid transparent;
+  margin-right: -40px;
 }
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch {
-  float: right;
-  width: 45%;
-  height: 100%;
-  box-shadow: 0px 5px 0px -1px rgba(0, 0, 0, 0.6);
-  background-color: #ffb040;
-  min-width: 220px;
-  box-sizing: border-box;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument {
-  width: 100%;
-  height: 100%;
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu {
   position: relative;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #topSearchText {
-  width: 100%;
-  float: left;
-  height: 20px;
-  font-size: 18px;
-  text-align: center;
-  padding: 2px 2px;
-  box-sizing: border-box;
-  border-bottom: 1px solid white;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #SearchButton {
-  position: absolute;
-  right: 2%;
-  bottom: 0;
-  width: 20%;
-  height: 35px;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #SearchButton img {
   float: right;
-  padding: 2px 0;
-  width: 35px;
-  height: 35px;
+  background-color: #26972d;
+  width: 200px;
+  height: 55px;
+  font-size: 21px;
+  cursor: pointer;
+  transition-timing-function: linear;
+  color: white;
 }
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #input_search {
-  background-color: saddlebrown;
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight {
   position: absolute;
-  width: 80%;
-  height: 25px;
-  left: 1%;
-  bottom: 4px;
-  border-bottom: 1px solid white;
+  margin-left: 30%;
+  height: 100%;
+  line-height: 55px;
+  text-align: center;
 }
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #search #searchPositionBlock #innerSearch #blockSearch #searchDocument #input_search #innerInput {
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight #underline-right {
+  height: 38px;
+  border-bottom: 1px white solid;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight #underline-right:hover {
+  border-bottom-color: #ffb040;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #forPNGRight {
+  position: absolute;
+  left: 0;
+  margin-top: 12px;
+  float: left;
+  width: 29px;
+  height: 29px;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #forPNGRight img {
   width: 100%;
   height: 100%;
-  background: #ffb040;
-  outline: none;
-  border: none;
-  color: white;
-  font-size: 20px;
+}
+#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #right-button-triangle {
+  float: left;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 55px solid #26972d;
+  border-left: 40px solid transparent;
+  margin-left: -40px;
 }
 #header #innerHeader #lineAfter {
   width: 100%;
@@ -205,19 +227,19 @@ body {
   height: 100%;
   position: relative;
   margin: 0 auto;
-  color: white;
-  background-color: #696969;
+  color: black;
+  background-color: #ffb040;
   font-size: 16px;
   text-align: center;
   box-sizing: border-box;
-  border-top: 1px solid white;
+  border-top: 1px solid #26972d;
 }
 #header #innerHeader #lineAfter #lineInner #left-triangle-bottom-line {
   float: left;
   content: "";
   width: 0;
   height: 0;
-  border-top: 22px solid #696969;
+  border-top: 22px solid #ffb040;
   border-left: 17px solid transparent;
   margin-left: -17px;
 }
@@ -226,128 +248,48 @@ body {
   content: "";
   width: 0;
   height: 0;
-  border-top: 22px solid #696969;
+  border-top: 22px solid #ffb040;
   border-right: 17px solid transparent;
   margin-right: -17px;
 }
-#header #innerHeader #menuButtons {
+#header #innerHeader #informMenuTittle {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 72px;
   width: 100%;
-  height: 42px;
-  margin-top: 2%;
+  height: 35px;
 }
-#header #innerHeader #menuButtons #innerMenuButtons {
+#header #innerHeader #informMenuTittle #inner-informMenuTittle {
   width: 100%;
   height: 100%;
   position: relative;
 }
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo {
-  position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  height: 50px;
-  perspective: 100000px;
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube {
-  position: relative;
-  width: 200px;
-  height: 50px;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .face,
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .bottom,
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .left,
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .right,
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .top,
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .zad {
-  width: 200px;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  background: #DCDCDC;
-  height: 50px;
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .face {
-  transform: translateZ(25px);
-  font-size: 20px;
-  line-height: 50px;
-  text-align: center;
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .bottom {
-  transform: rotateX(-90deg) translateZ(25px);
-  font-size: 20px;
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .left {
-  transform: rotateY(-90deg) rotateZ(90deg) translateZ(25px);
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .right {
-  transform: rotateY(90deg) translateZ(25px);
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .top {
-  transform: rotateX(90deg) translateZ(25px);
-}
-#header #innerHeader #menuButtons #innerMenuButtons #centre_logo .cube .zad {
-  transform: translateZ(-25px);
-}
-#header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft {
-  float: left;
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 200px;
+#header #innerHeader #informMenuTittle #inner-informMenuTittle #texInfoTitle {
+  width: 25%;
   height: 100%;
-  cursor: pointer;
-  font-size: 21px;
-  transition: 1s;
-  position: relative;
-  transition-timing-function: linear;
-  box-shadow: 1px 5px 10px 0 rgba(0, 0, 0, 0.2);
-}
-#header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft {
-  position: absolute;
-  margin-right: 20%;
-  height: 100%;
-  color: white;
-  right: 0;
-  line-height: 40px;
+  margin: 0 auto;
   text-align: center;
-}
-#header #innerHeader #menuButtons #innerMenuButtons #buttonMenuLeft #circle_buttons_left {
-  float: right;
-  width: 42px;
-  content: "";
-  border: 1px solid #ffb040;
-  height: 40px;
-  border-radius: 50%;
+  font-size: 16px;
+  line-height: 35px;
   background-color: #ffb040;
-  margin-right: -21px;
 }
-#header #innerHeader #menuButtons #innerMenuButtons #buttonRightMenu {
-  position: relative;
-  float: right;
-  background-color: rgba(255, 176, 64, 0.9);
-  width: 200px;
-  height: 100%;
-  font-size: 22px;
-  cursor: pointer;
-  transition: 1s;
-  transition-timing-function: linear;
-  box-shadow: 1px 5px 10px 0 rgba(0, 0, 0, 0.2);
-}
-#header #innerHeader #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight {
-  position: absolute;
-  margin-left: 34%;
-  height: 100%;
-  color: white;
-  line-height: 40px;
-  text-align: center;
-}
-#header #innerHeader #menuButtons #innerMenuButtons #buttonRightMenu #circle_buttons_right {
+#header #innerHeader #informMenuTittle #inner-informMenuTittle #texInfoTitle #left-triangle-inf {
   float: left;
-  width: 42px;
   content: "";
-  border: 1px solid #ffb040;
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-  margin-left: -21px;
+  width: 0;
+  height: 0;
+  border-bottom: 35px solid #ffb040;
+  border-left: 40px solid transparent;
+  margin-left: -40px;
+}
+#header #innerHeader #informMenuTittle #inner-informMenuTittle #texInfoTitle #right-triangle-inf {
+  float: right;
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 35px solid #ffb040;
+  border-right: 40px solid transparent;
+  margin-right: -40px;
 }
 #header #innerHeader #menuUl {
   width: 100%;
@@ -386,10 +328,10 @@ body {
   font-size: 16px;
   text-align: center;
   line-height: 72px;
-  color: #ffb040;
+  color: #26972d;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul li:hover {
-  background-color: #ffb040;
+  background-color: #26972d;
   color: black;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices {
@@ -419,13 +361,16 @@ body {
   background-color: #ffb040;
   color: black;
 }
+#header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li div {
+  position: absolute;
+}
 #header #innerHeader #menuUl #innerMenuUl #LoadingLineTop {
   width: 100%;
   height: 4px;
 }
 #header #innerHeader #menuUl #innerMenuUl #LoadingLineTop #expand_left {
   height: 4px;
-  background: #696969;
+  background: #26972d;
   position: absolute;
   left: 0;
 }
@@ -441,7 +386,7 @@ body {
 }
 #header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2_right {
   height: 4px;
-  background: #696969;
+  background: #26972d;
   position: absolute;
   right: 0;
 }
@@ -477,7 +422,7 @@ body {
   box-shadow: 0px -5px 0px 0px rgba(0, 0, 0, 0.75);
 }
 #footer #innerFooter #footerInform {
-  background-color: #ffb040;
+  background-color: #26972d;
   width: 100%;
   height: 100px;
   position: relative;
