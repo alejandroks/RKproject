@@ -37,7 +37,8 @@ body{
   width: 100%;
   height: 100%;
   min-width: 1000px;
-  background-image:url(../imageAndLogo/12.jpg);
+  background:url(../imageAndLogo/13.jpg) 100% 100%  no-repeat;
+  background-size: cover;
 }
 #wrapper{
   width: 100%;
@@ -57,7 +58,7 @@ body{
     #topLine{
       width: 100%;
       height: 5%;
-      box-shadow: 0px 5px 0px -1px rgba(0,0,0,0.6);
+      box-shadow: 0px 5px 0px -1px rgba(255,176,64,0.8);
       #innerLine{
         width: 100%;
         height: 100%;
@@ -130,7 +131,7 @@ body{
               transition-timing-function: linear;
               background-color: @primary-color;
               color: white;
-
+              border-bottom: 2px solid @primary-color-2;
               #textForMenuLeft{
                 position: absolute;
                 margin-right: 20%;
@@ -167,6 +168,7 @@ body{
                 border-right: 40px solid transparent;
                 margin-right: -40px;
               }
+
             }
             #buttonRightMenu{
               position: relative;
@@ -178,6 +180,7 @@ body{
               cursor: pointer;
               transition-timing-function: linear;
               color: white;
+              border-bottom: 2px solid @primary-color-2;
               #textForMenuRight{
                 position: absolute;
                 margin-left: 30%;
