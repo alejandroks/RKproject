@@ -270,10 +270,8 @@ body {
 #header #innerHeader #informMenuTittle #inner-informMenuTittle #texInfoTitle {
   width: 25%;
   height: 100%;
+  position: relative;
   margin: 0 auto;
-  text-align: center;
-  font-size: 16px;
-  line-height: 35px;
   background-color: #ffb040;
 }
 #header #innerHeader #informMenuTittle #inner-informMenuTittle #texInfoTitle #left-triangle-inf {
@@ -284,6 +282,14 @@ body {
   border-bottom: 35px solid #ffb040;
   border-left: 40px solid transparent;
   margin-left: -40px;
+}
+#header #innerHeader #informMenuTittle #inner-informMenuTittle #texInfoTitle #textInfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 35px;
 }
 #header #innerHeader #informMenuTittle #inner-informMenuTittle #texInfoTitle #right-triangle-inf {
   float: right;
@@ -341,7 +347,7 @@ body {
   visibility: hidden;
   position: absolute;
   left: 50%;
-  margin-left: -600px;
+  margin-left: -400px;
   display: inline-block;
   vertical-align: middle;
   height: 72px;
@@ -422,7 +428,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  box-shadow: 0px -5px 0px 0px rgba(0, 0, 0, 0.75);
+  border-top: 2px solid #ffb040;
 }
 #footer #innerFooter #footerInform {
   background-color: #26972d;
@@ -493,7 +499,7 @@ body {
   width: 100%;
   height: 25px;
   box-shadow: inset 0px 7px 14px 0px rgba(0, 0, 0, 0.56);
-  background-color: #696969;
+  background-color: #ffb040;
   margin-top: -10px;
 }
 #footer #innerFooter #basement #text {

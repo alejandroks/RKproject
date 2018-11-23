@@ -39,6 +39,9 @@ MainIndexControl.prototype = {
         var menuInformation = document.getElementById('menuInformation');
         var menuServices = document.getElementById('menuServices');
 
+        var menyTextHead = document.getElementById('textInfo');
+
+
         leftButtonMenu.onclick = function OnClickButton() {
 
 
@@ -59,12 +62,13 @@ MainIndexControl.prototype = {
 
 
                     if(progress==1){
-                        parentLineOne.style.background = '#3CB371';
-                        parentLineTwo.style.background = '#3CB371';
+                        parentLineOne.style.background = '#26972D';
+                        parentLineTwo.style.background = '#26972D';
                         lineOneLeft.style.width = '0';
                         lineTwoRight.style.width = '0';
                         menuInformation.style.visibility= 'visible';
                         menuServices.style.visibility= 'hidden';
+                        menyTextHead.innerHTML = 'Информация';
                     }
                 }
             });
@@ -92,6 +96,7 @@ MainIndexControl.prototype = {
                         lineTwoLeft.style.width = '0';
                         menuInformation.style.visibility= 'hidden';
                         menuServices.style.visibility= 'visible';
+                        menyTextHead.innerHTML = 'Услуги';
                     }
                 }
             });
