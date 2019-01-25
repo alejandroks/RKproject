@@ -34,6 +34,9 @@ MainIndexControl.prototype = {
         var leftButtonMenu = document.getElementById('buttonMenuLeft');
         var rightButtonMenu = document.getElementById('buttonRightMenu');
 
+        var test = document.getElementsByClassName('btn');
+
+
 
 
         var menuInformation = document.getElementById('menuInformation');
@@ -42,9 +45,10 @@ MainIndexControl.prototype = {
         var menyTextHead = document.getElementById('textInfo');
 
 
+
         leftButtonMenu.onclick = function OnClickButton() {
-
-
+            test[0].setAttribute("data-type", "diagonal_swipe_left_static");
+            test[1].setAttribute("data-type", "diagonal_swipe_right");
             lineOneRight.style.width = '0';
             lineTwoLeft.style.width = '0';
 
@@ -56,7 +60,7 @@ MainIndexControl.prototype = {
                 draw:function(progress){
                     lineOneLeft.style.width = progress * 100 +'%';
 
-                    lineTwoRight.style.width = progress * 100 +'%';
+                    lineTwoLeft.style.width = progress * 100 +'%';
 
 
 
@@ -75,7 +79,8 @@ MainIndexControl.prototype = {
             };
 
         rightButtonMenu.onclick = function OnClickButton(){
-
+            test[1].setAttribute("data-type", "diagonal_swipe_right_static");
+            test[0].setAttribute("data-type", "diagonal_swipe_left");
             lineTwoLeft.style.width = '0';
             lineOneRight.style.width = '0';
             animate({
@@ -85,7 +90,7 @@ MainIndexControl.prototype = {
                 },
                 draw:function(progress){
                     lineOneRight.style.width = progress * 100 +'%';
-                    lineTwoLeft.style.width = progress * 100 +'%';
+                    lineTwoRight.style.width = progress * 100 +'%';
 
 
 

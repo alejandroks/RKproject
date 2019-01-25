@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link rel="stylesheet" href="style/style-for-buttons.css">
     <meta charset="utf-8" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="script/MainIndexControl.js"></script>
@@ -15,31 +16,9 @@
 <div id="wrapper">
     <div id="header">
         <div id="innerHeader">
-
-
-            <div id="topLine">
-                <div id="innerLine"></div>
-            </div>
-
-
             <div id="logoAndSearch">
                 <div id="innerLogoAndSearch">
 
-                    <div id="menuButtons">
-                        <div id="innerMenuButtons">
-                            <div id="buttonMenuLeft">
-                                <div id="textForMenuLeft"><div id="underline-left">Информация</div></div>
-                                <div id="forPNGLeft"><img src="imageAndLogo/searcher.png"></div>
-                                <div id="left-button-triangle"></div>
-
-                            </div>
-                            <div id="buttonRightMenu">
-                                <div id="forPNGRight"><img src="imageAndLogo/shopping.png"></div>
-                                <div id="textForMenuRight"><div id="underline-right">Услуги</div></div>
-                                <div id="right-button-triangle"></div>
-                            </div>
-                        </div>
-                    </div>
 
 
                     <div id="logo">
@@ -66,7 +45,7 @@
     <div id="inner-informMenuTittle">
         <div id="texInfoTitle">
             <div id="left-triangle-inf"></div>
-            <div id="textInfo"></div>
+            <div id="textInfo">Информация</div>
             <div id="right-triangle-inf"></div>
         </div>
     </div>
@@ -79,23 +58,35 @@
                         <span id="expand_left"></span>
                         <span id="expand_right"></span>
                     </div>
+                    <div id="menuButtons">
+                        <div id="innerMenuButtons">
+                            <div id="buttonMenuLeft">
+                                <div class="btn" data-type="diagonal_swipe_left">
+                                    <div style="float: left; margin-left: 17px;margin-top: 26px;border-bottom: 1px solid #26972D">Информация</div>
+                                </div>
+                            </div>
+                            <div id="buttonRightMenu">
+                                <div class="btn" data-type="diagonal_swipe_right">
+                                    <div style="float: right;margin-right: 20px;margin-top: 26px;border-bottom: 1px solid #FFB040">Услуги</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="parentMenu">
                     <div id="menuInformation">
-                        <ul>
-                            <li>Главная</li>
-                            <li>Контактные данные</li>
-                            <li>Как нас найти</li>
-                            <li>Список ПП</li>
-                            <li>Для Арендаторов</li>
-                            <li>Карта схема</li>
-                        </ul>
+                            <ul>
+                                <li>Как нас найти</li>
+                                <li>Список ПП</li>
+                                <li>Арендаторам</li>
+                                <li>Карта схема</li>
+                            </ul>
                     </div>
                         <div id="menuServices">
                             <ul>
-                                <li>Рекламные услуги</li>
-                                <li>Аденда площадей</li>
-                                <li ><div>Регистрация торгового</div><div style="margin-top: 13px;margin-left: 70px">места</div></li>
-                                <li>Контактные данные</li>
+                                <li><div>Рекламные услуги</div></li>
+                                <li><div>Аденда площадей</div></li>
+                                <li ><div>Регистрация торгового места</div></li>
+                                <li><div>Контактные данные</div></li>
                             </ul>
                         </div>
                     </div>
@@ -121,23 +112,29 @@
                     <div id="InformFooterBox">
                         <div id="inner">
                             <div id="firstInfoBox">
-                                <img src="imageAndLogo/123.png">
-                                Все сведения представлены компанией Эйлинол в 2017 году.
+                                <div style="font-weight:bold; font-size: 18px;color: white; "> О предприятии</div>
+                                <div style="margin-top: 5px">Унитарное предприятие эйлинол работает c 2002 года.
+                                    На тереитории предприятия реализовано большое количество торговых мест, складов и офисов, так же
+                                    просторная бесплатная парковка, охранные комплексы.<div>При возникновение вопросов вас всегда проконсультирует
+                                        отзывчивый персонал.</div>  </div>
+
                             </div>
                             <div id="SecondInfoBox">
-                                Контактные телефон/факс 205-06-06
-                                Комерческий отдел/ 230.
+                                <div style="font-weight:bold; font-size: 18px;color: white; ">О Сайте</div>
+                                <div style="margin-top: 5px">Сайт создан с поддержкой Унитарного Предприятия "Эйлинол"</div>
+                                <div style="margin-top: 15px">Сайт находится в активной работе с 2019 г.</div>
+                                <div style="margin-top: 15px">Все права защищены.</div>
 
                             </div>
                             <div id="thirdInfoBox">
-                                Располагаемся по адресу 220092, г. Минск, ул. Дунина-Марцинкевича,11.
-                                УНП 800006875, ОКПО 37549965.
+
                             </div>
                             <div id="fourthInfoBox">
-                                По вопросам размещения рекламы 8029 556 52 78.
-                            </div>
-                            <div id="fifthInfoBox">
-                                Офис находится на третьем этаже торгового рынка, для доступа набирать внутренний телефон приёмной - 240.
+                                <div style="font-weight:bold; font-size: 18px;color: white; ">Контактная ифнормация</div>
+                                <div style="margin-top: 10px"><img src="imageAndLogo/telephone%20.png">контактный тел./факс: 205-06-60 </div>
+                                <div style="margin-top: 10px"><img src="imageAndLogo/office.png">внутренний телефон на входе: 240 </div>
+                                <div style="margin-top: 10px"><img src="imageAndLogo/email.png">email: it@rk.by или info@rk.by </div>
+                                <div style="margin-top: 10px">Адресс: Дунини Марцинкевича 11 (ст.м. Пушкинская) </div>
                             </div>
                         </div>
                     </div>

@@ -46,24 +46,13 @@ body {
 }
 #header {
   width: 100%;
-  height: 250px;
+  height: 240px;
 }
 #header #innerHeader {
   width: 100%;
   height: 100%;
   position: relative;
   box-sizing: border-box;
-}
-#header #innerHeader #topLine {
-  width: 100%;
-  height: 5%;
-  box-shadow: 0px 5px 0px -1px rgba(255, 176, 64, 0.8);
-}
-#header #innerHeader #topLine #innerLine {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: #26972d;
 }
 #header #innerHeader #logoAndSearch {
   width: 100%;
@@ -110,109 +99,6 @@ body {
   border-top: 55px solid #26972d;
   border-right: 40px solid transparent;
   margin-right: -40px;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons {
-  width: 100%;
-  position: absolute;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft {
-  float: left;
-  width: 200px;
-  height: 55px;
-  cursor: pointer;
-  font-size: 21.5px;
-  position: relative;
-  transition-timing-function: linear;
-  background-color: #26972d;
-  color: white;
-  border-bottom: 2px solid #ffb040;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft {
-  position: absolute;
-  margin-right: 20%;
-  height: 100%;
-  right: 0;
-  line-height: 55px;
-  text-align: center;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft #underline-left {
-  height: 38px;
-  border-bottom: 1px white solid;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #textForMenuLeft #underline-left:hover {
-  border-bottom-color: #ffb040;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #forPNGLeft {
-  position: absolute;
-  margin-top: 12px;
-  right: 0;
-  width: 30px;
-  height: 30px;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #forPNGLeft img {
-  width: 100%;
-  height: 100%;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonMenuLeft #left-button-triangle {
-  float: right;
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 55px solid #26972d;
-  border-right: 40px solid transparent;
-  margin-right: -40px;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu {
-  position: relative;
-  float: right;
-  background-color: #26972d;
-  width: 200px;
-  height: 55px;
-  font-size: 21px;
-  cursor: pointer;
-  transition-timing-function: linear;
-  color: white;
-  border-bottom: 2px solid #ffb040;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight {
-  position: absolute;
-  margin-left: 30%;
-  height: 100%;
-  line-height: 55px;
-  text-align: center;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight #underline-right {
-  height: 38px;
-  border-bottom: 1px white solid;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #textForMenuRight #underline-right:hover {
-  border-bottom-color: #ffb040;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #forPNGRight {
-  position: absolute;
-  left: 0;
-  margin-top: 12px;
-  float: left;
-  width: 29px;
-  height: 29px;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #forPNGRight img {
-  width: 100%;
-  height: 100%;
-}
-#header #innerHeader #logoAndSearch #innerLogoAndSearch #menuButtons #innerMenuButtons #buttonRightMenu #right-button-triangle {
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 55px solid #26972d;
-  border-left: 40px solid transparent;
-  margin-left: -40px;
 }
 #header #innerHeader #lineAfter {
   width: 100%;
@@ -306,11 +192,33 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1000;
+  transition: 0.5s ease-in-out;
 }
 #header #innerHeader #menuUl #innerMenuUl {
   width: 100%;
   height: 100%;
   position: relative;
+}
+#header #innerHeader #menuUl #innerMenuUl #menuButtons {
+  width: 100%;
+  position: absolute;
+}
+#header #innerHeader #menuUl #innerMenuUl #menuButtons #innerMenuButtons {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#header #innerHeader #menuUl #innerMenuUl #menuButtons #innerMenuButtons #buttonMenuLeft {
+  float: left;
+  margin-left: -2px;
+  cursor: pointer;
+  position: relative;
+}
+#header #innerHeader #menuUl #innerMenuUl #menuButtons #innerMenuButtons #buttonRightMenu {
+  margin-right: -2px;
+  position: relative;
+  float: right;
+  cursor: pointer;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu {
   height: 72px;
@@ -319,8 +227,9 @@ body {
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation {
   visibility: visible;
   position: absolute;
+  width: 50%;
   left: 50%;
-  margin-left: -600px;
+  margin-left: -25%;
   display: inline-block;
   vertical-align: middle;
   height: 72px;
@@ -328,10 +237,11 @@ body {
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul {
   position: relative;
   height: 72px;
+  width: 100%;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul li {
   float: left;
-  width: 200px;
+  width: 25%;
   cursor: pointer;
   height: 100%;
   font-size: 16px;
@@ -340,14 +250,16 @@ body {
   color: #26972d;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul li:hover {
+  transition: 0.5s;
   background-color: #26972d;
   color: black;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices {
   visibility: hidden;
   position: absolute;
+  width: 50%;
   left: 50%;
-  margin-left: -400px;
+  margin-left: -25%;
   display: inline-block;
   vertical-align: middle;
   height: 72px;
@@ -355,23 +267,28 @@ body {
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul {
   position: relative;
   height: 72px;
+  width: 100%;
+  vertical-align: middle;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
   float: left;
-  width: 200px;
+  width: 25%;
   cursor: pointer;
   height: 100%;
   font-size: 16px;
   text-align: center;
-  line-height: 72px;
   color: #ffb040;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li:hover {
   background-color: #ffb040;
   color: black;
+  transition: 0.5s;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li div {
-  position: absolute;
+  padding-top: 12%;
 }
 #header #innerHeader #menuUl #innerMenuUl #LoadingLineTop {
   width: 100%;
@@ -393,22 +310,23 @@ body {
   width: 100%;
   height: 4px;
 }
-#header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2_right {
+#header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2_left {
   height: 4px;
   background: #26972d;
   position: absolute;
-  right: 0;
+  left: 0;
 }
-#header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2_left {
+#header #innerHeader #menuUl #innerMenuUl #LoadingLineBot #expand2_right {
   height: 4px;
   background: #ffb040;
   position: absolute;
-  left: 0;
+  right: 0;
 }
 #center {
   width: 100%;
   height: 100%;
   display: table-row;
+  overflow: hidden;
 }
 #center #innerCenter {
   width: 100%;
@@ -420,6 +338,7 @@ body {
   width: 100%;
   height: 100%;
   border-style: none;
+  overflow: hidden;
 }
 #footer {
   width: 100%;
@@ -428,76 +347,62 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  border-top: 2px solid #ffb040;
+  border-top: 1px solid #ffb040;
+  background-color: #26972d;
 }
 #footer #innerFooter #footerInform {
-  background-color: #26972d;
   width: 100%;
-  height: 100px;
+  height: 300px;
   position: relative;
 }
 #footer #innerFooter #footerInform #InformFooterBox {
   width: 100%;
-  height: 50px;
+  height: 250px;
+  margin-top: 40px;
   position: absolute;
-  margin-top: 22px;
+  color: black;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner {
   position: relative;
-  width: 90%;
+  width: 1000px;
   height: 100%;
   margin: 0 auto;
-  color: black;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #firstInfoBox {
-  box-sizing: border-box;
   float: left;
-  width: 20%;
-  height: 100%;
+  width: 250px;
+  height: 200px;
   font-size: 14px;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-}
-#footer #innerFooter #footerInform #InformFooterBox #inner #firstInfoBox img {
-  float: left;
-  width: 50px;
-  height: 100%;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #SecondInfoBox {
-  box-sizing: border-box;
   float: left;
-  width: 20%;
-  height: 100%;
+  margin-left: 10px;
+  width: 235px;
+  height: 200px;
   font-size: 14px;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #thirdInfoBox {
-  box-sizing: border-box;
-  float: left;
-  width: 20%;
-  height: 100%;
   font-size: 14px;
-  border-left: 1px solid black;
+  float: left;
+  width: 215px;
+  height: 200px;
 }
 #footer #innerFooter #footerInform #InformFooterBox #inner #fourthInfoBox {
-  box-sizing: border-box;
-  float: left;
-  width: 20%;
-  height: 100%;
   font-size: 14px;
-  border-left: 1px solid black;
+  float: left;
+  width: 290px;
+  height: 200px;
 }
-#footer #innerFooter #footerInform #InformFooterBox #inner #fifthInfoBox {
-  box-sizing: border-box;
+#footer #innerFooter #footerInform #InformFooterBox #inner #fourthInfoBox img {
   float: left;
-  width: 20%;
-  height: 100%;
-  font-size: 14px;
-  border-left: 1px solid black;
+  width: 15px;
+  height: 15px;
+  padding: 0px  5px  0px  0px;
 }
 #footer #innerFooter #basement {
   position: relative;
   width: 100%;
-  height: 25px;
+  height: 20px;
   box-shadow: inset 0px 7px 14px 0px rgba(0, 0, 0, 0.56);
   background-color: #ffb040;
   margin-top: -10px;
@@ -507,7 +412,7 @@ body {
   font-size: 20px;
 }
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 12px;
 }
 ::-webkit-scrollbar-thumb {
   background: #696969;

@@ -49,24 +49,12 @@ body{
 }
 #header{
   width: 100%;
-  height: 250px;
+  height: 240px;
   #innerHeader{
     width: 100%;
     height: 100%;
     position: relative;
     box-sizing: border-box;
-    #topLine{
-      width: 100%;
-      height: 5%;
-      box-shadow: 0px 5px 0px -1px rgba(255,176,64,0.8);
-      #innerLine{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background-color: @primary-color;
-
-      }
-    }
 
     #logoAndSearch{
       width: 100%;
@@ -113,112 +101,7 @@ body{
             margin-right: -40px;
           }
         }
-        #menuButtons{
-          width: 100%;
-          position: absolute;
-          #innerMenuButtons{
-            width: 100%;
-            height: 100%;
-            position: relative;
 
-            #buttonMenuLeft{
-              float: left;
-              width: 200px;
-              height: 55px;
-              cursor: pointer;
-              font-size: 21.5px;
-              position: relative;
-              transition-timing-function: linear;
-              background-color: @primary-color;
-              color: white;
-              border-bottom: 2px solid @primary-color-2;
-              #textForMenuLeft{
-                position: absolute;
-                margin-right: 20%;
-                height: 100%;
-                right: 0;
-                line-height: 55px;
-                text-align: center;
-                #underline-left{
-                  height:38px;
-                  border-bottom: 1px white solid;
-                  &:hover{
-                    border-bottom-color: @primary-color-2;
-                  }
-                }
-
-              }
-              #forPNGLeft{
-                position: absolute;
-                margin-top: 12px;
-                right: 0;
-                width: 30px;
-                height: 30px;
-                img{
-                  width: 100%;
-                  height: 100%;
-                }
-              }
-              #left-button-triangle{
-                float: right;
-                content: "";
-                width: 0;
-                height: 0;
-                border-top: 55px solid @primary-color;
-                border-right: 40px solid transparent;
-                margin-right: -40px;
-              }
-
-            }
-            #buttonRightMenu{
-              position: relative;
-              float: right;
-              background-color: @primary-color;
-              width: 200px;
-              height: 55px;
-              font-size: 21px;
-              cursor: pointer;
-              transition-timing-function: linear;
-              color: white;
-              border-bottom: 2px solid @primary-color-2;
-              #textForMenuRight{
-                position: absolute;
-                margin-left: 30%;
-                height: 100%;
-                line-height: 55px;
-                text-align: center;
-                #underline-right{
-                  height:38px;
-                  border-bottom: 1px white solid;
-                  &:hover{
-                    border-bottom-color: @primary-color-2;
-                  }
-                }
-              }
-              #forPNGRight{
-                position: absolute;
-                left: 0;
-                margin-top: 12px;
-                float: left;
-                width: 29px;
-                height: 29px;
-                img{
-                  width: 100%;
-                  height: 100%;
-                }
-              }
-              #right-button-triangle{
-                float: left;
-                content: "";
-                width: 0;
-                height: 0;
-                border-top: 55px solid @primary-color;
-                border-left: 40px solid transparent;
-                margin-left: -40px;
-              }
-            }
-          }
-        }
       }
     }
     #lineAfter{
@@ -315,67 +198,104 @@ body{
       position: absolute;
       bottom: 0px;
       z-index: 1000;
-
+      transition: 0.5s ease-in-out;
       #innerMenuUl{
         width: 100%;
         height: 100%;
         position: relative;
+
+        #menuButtons{
+
+          width: 100%;
+          //font-family: Arial, Helvetica, Verdana, sans-serif;
+          position: absolute;
+          #innerMenuButtons{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            #buttonMenuLeft{
+              float: left;
+              margin-left: -2px;
+              cursor: pointer;
+              position: relative;
+            }
+            #buttonRightMenu{
+              margin-right: -2px;
+              position: relative;
+              float: right;
+              cursor: pointer;
+            }
+          }
+        }
+
+
         .parentMenu{
           height: 72px;
           background: rgba(0, 0, 0,0.85);
         #menuInformation{
           visibility: visible;
           position: absolute;
+          width: 50%;
           left: 50%;
-          margin-left:-600px ;
+          margin-left:-25% ;
           display: inline-block;
           vertical-align: middle;
           height:72px;
-          ul{
-            position: relative;
-            height:72px;
-            li{
-              float: left;
-              width: 200px;
-              cursor: pointer;
-              height: 100%;
-              font-size: 16px;
-              text-align: center;
-              line-height: 72px;
-              color: @primary-color;
-              &:hover{
-                background-color: @primary-color;
-                color: black;
+            ul{
+              position: relative;
+              height:72px;
+              width: 100%;
+              li{
+                float: left;
+                width: 25%;
+                cursor: pointer;
+                height: 100%;
+                font-size: 16px;
+                text-align: center;
+                line-height: 72px;
+                color: @primary-color;
+                &:hover{
+                  transition: 0.5s;
+                  background-color: @primary-color;
+                  color: black;
+                }
               }
             }
-          }
+
         }
           #menuServices{
             visibility: hidden;
             position: absolute;
+            width: 50%;
             left: 50%;
-            margin-left:-400px ;
+            margin-left:-25% ;
             display: inline-block;
             vertical-align: middle;
             height:72px;
             ul{
               position: relative;
               height:72px;
+              width: 100%;
+              vertical-align:middle;
               li{
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
                 float: left;
-                width: 200px;
+                width: 25%;
                 cursor: pointer;
                 height: 100%;
                 font-size: 16px;
                 text-align: center;
-                line-height: 72px;
                 color: @primary-color-2;
                 &:hover{
                   background-color: @primary-color-2;
                   color: black;
+                  transition: 0.5s;
                 }
                 div{
-                  position: absolute;
+                  padding-top: 12%;
+
                 }
               }
             }
@@ -396,22 +316,25 @@ body{
             position: absolute;
             right: 0;
           }
+
+
         }
         #LoadingLineBot {
           width: 100%;
           height: 4px;
-          #expand2_right {
+          #expand2_left {
             height: 4px;
             background: @primary-color;
             position: absolute;
-            right: 0;
+            left: 0;
           }
-          #expand2_left {
+          #expand2_right {
             height: 4px;
             background: @primary-color-2;
             position: absolute;
-            left: 0;
+            right: 0;
           }
+
         }
       }
     }
@@ -421,6 +344,7 @@ body{
   width: 100%;
   height: 100%;
   display: table-row;
+  overflow: hidden;
   #innerCenter{
     width: 100%;
     position: relative;
@@ -430,6 +354,7 @@ body{
       width: 100%;
       height: 100%;
       border-style: none;
+      overflow: hidden;
     }
   }
 }
@@ -440,70 +365,57 @@ body{
       width: 100%;
       height: 100%;
       position: relative;
-     // box-shadow: 0px -5px 0px 0px rgba(0,0,0,0.75);
-      border-top: 2px solid @primary-color-2;
+      border-top: 1px solid @primary-color-2;
+      background-color:@primary-color;
       #footerInform{
-        background-color:@primary-color;
         width: 100%;
-        height: 100px;
+        height: 300px;
         position: relative;
         #InformFooterBox{
           width: 100%;
-          height: 50px;
+          height: 250px;
+          margin-top: 40px;
           position: absolute;
-         // background-color: rgba(0, 0, 0, 0.90);//rgba(0, 0, 0, 0.87)
-          margin-top: 22px;
+          color: black;
 
           #inner{
             position: relative;
-            width: 90%;
+            width: 1000px;
             height: 100%;
             margin: 0 auto;
-            color: black;
             #firstInfoBox{
-              box-sizing: border-box;
               float: left;
-              img{
-                float: left;
-                width: 50px;
-                height: 100%;
-              }
-              width: 20%;
-              height: 100%;
+              width: 250px;
+              height: 200px;
               font-size: 14px;
-              border-right: 1px solid black;
-              border-left: 1px solid black;
             }
             #SecondInfoBox{
-              box-sizing: border-box;
+
               float: left;
-              width: 20%;
-              height: 100%;
+              margin-left: 10px;
+              width: 235px;
+              height: 200px;
               font-size: 14px;
+
             }
           #thirdInfoBox{
-            box-sizing: border-box;
-            float: left;
-            width: 20%;
-            height: 100%;
             font-size: 14px;
-            border-left: 1px solid black;
+            float: left;
+            width: 215px;
+            height: 200px;
           }
           #fourthInfoBox{
-            box-sizing: border-box;
-            float: left;
-            width: 20%;
-            height: 100%;
+            img{
+              float: left;
+              width: 15px;
+              height: 15px;
+              padding: 0px  5px  0px  0px;
+            }
             font-size: 14px;
-            border-left: 1px solid black;
-          }
-          #fifthInfoBox{
-            box-sizing: border-box;
             float: left;
-            width: 20%;
-            height: 100%;
-            font-size: 14px;
-            border-left: 1px solid black;
+            width: 290px;
+            height: 200px;
+
           }
           }
         }
@@ -511,7 +423,7 @@ body{
       #basement{
         position: relative;
         width: 100%;
-        height: 25px;
+        height: 20px;
         box-shadow: inset 0px 7px 14px 0px rgba(0,0,0,0.56);
         background-color: @primary-color-2;
         margin-top: -10px;
@@ -529,7 +441,7 @@ body{
 
 // For Google Chrome
 ::-webkit-scrollbar {
-  width:  5px;
+  width:  12px;
 }
 
 ::-webkit-scrollbar-thumb {
