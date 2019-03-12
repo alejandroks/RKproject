@@ -96,3 +96,11 @@
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
+[data-type="information"]{
+  background-color: #26972D;
+  color:black;
+}
+[data-type="serv"]{
+  background-color: #FFB040;
+  color: black;
+}

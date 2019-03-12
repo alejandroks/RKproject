@@ -3,7 +3,7 @@ function MainIndexControl(options) {
     var selfRef = this;
     var counteiner = options.counteiner;
     this.transportService = new TransportService();
-
+    this.menyHolder();
     selfRef.MainIndexControlCreateMenuTopControl();
     selfRef.iframeSizeSet();
     selfRef.MainControlMenu();
@@ -69,7 +69,7 @@ MainIndexControl.prototype = {
                         parentLineOne.style.background = '#26972D';
                         parentLineTwo.style.background = '#26972D';
                         lineOneLeft.style.width = '0';
-                        lineTwoRight.style.width = '0';
+                        lineTwoLeft.style.width = '0';
                         menuInformation.style.visibility= 'visible';
                         menuServices.style.visibility= 'hidden';
                         menyTextHead.innerHTML = 'Информация';
@@ -98,7 +98,7 @@ MainIndexControl.prototype = {
                         parentLineOne.style.background = '#FFB040';
                         parentLineTwo.style.background = '#FFB040';
                         lineOneRight.style.width = '0';
-                        lineTwoLeft.style.width = '0';
+                        lineTwoRight.style.width = '0';
                         menuInformation.style.visibility= 'hidden';
                         menuServices.style.visibility= 'visible';
                         menyTextHead.innerHTML = 'Услуги';
@@ -107,22 +107,109 @@ MainIndexControl.prototype = {
             });
         };
     },
+    menyHolder: function (){
+
+
+    var menuJS = document.getElementById('menuUl');
+    var menuJSClientHeight = menuJS.clientHeight;
+
+    var inner_header = document.getElementById('innerHeader');
+    var inner_headerClientHeight = inner_header.clientHeight;
+
+    window.onscroll  = function(){
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        if(top>= inner_headerClientHeight - menuJSClientHeight){
+            menuJS.style.position = 'fixed';
+            menuJS.style.top = '0';
+            menuJS.style.bottom = '';
+        }
+        if(top< inner_headerClientHeight - menuJSClientHeight){
+            menuJS.style.position = 'absolute';
+            menuJS.style.top = '';
+            menuJS.style.bottom = '0';
+        }
+    };
+
+},
+    iframeSizeSet: function () {
+    var iframe = $('#mainIframe').contents();
+    var newsBlockParentIframe = $('#innerCenter');
+    var iframeSize = iframe.find('body').height();
+
+    newsBlockParentIframe.height(iframeSize);
+
+    if (iframe.find('.newsCellText')) {
+        iframe.find('.newsCellText').click(function () {
+            var iframeSize = iframe.find('body').height();
+            newsBlockParentIframe.height(iframeSize);
+        })
+    }
+},
+    iframeSetChenge: function(iframePageSet){
+        var self =this;
+        var mainIframe = document.getElementById('mainIframe');
+        if(iframePageSet.src !== 'null'){
+            mainIframe.src = iframePageSet.src;
+        }else { console.log('404');}
+        mainIframe.onload = function(){
+            self.iframeSizeSet();
+        };
+        delete this.self;
+
+    },
+
+
     MainControlMenu: function () {
 
-        menyHolder();
-    },
-    iframeSizeSet: function () {
-        var iframe = $('#mainIframe').contents();
-        var newsBlockParentIframe = $('#innerCenter');
-        var iframeSize = iframe.find('body').height();
-        newsBlockParentIframe.height(iframeSize);
-        if (iframe.find('.newsCellText')) {
-            iframe.find('.newsCellText').click(function () {
-                var iframeSize = iframe.find('body').height();
-                newsBlockParentIframe.height(iframeSize);
-            })
+        var menuInformation = document.getElementById('menuInformation');
+        var menuInformationLiList = menuInformation.querySelectorAll('ul > li');
+
+        var menuServices = document.getElementById('menuServices');
+        var menuServicesLiList = menuServices.querySelectorAll('ul > li');
+
+        var self = this;
+        var listIframeObjInfo = [];
+
+        var inner_head_size = document.getElementById('innerHeader').offsetHeight;
+
+        listIframeObjInfo.push(getIframe('iframe1','admin/index.html'));
+        listIframeObjInfo.push(getIframe('iframe2','iframe-pages/mainPage/mainPage.html'));
+        listIframeObjInfo.push(getIframe('iframe3','null'));
+        listIframeObjInfo.push(getIframe('iframe4','null'));
+
+        for(let i = 0; i<menuInformationLiList.length; i++){
+            menuInformationLiList[i].onclick = function(){
+                var pageY = window.pageYOffset || document.documentElement.scrollTop;
+                if(pageY >inner_head_size+100){
+                    window.scrollTo(0,0);
+                }
+                this.setAttribute('data-type','information');
+                removeAllAtribute(this);
+                self.iframeSetChenge(listIframeObjInfo[i]);
+            };
         }
+
+        var listIframeObjServicec = [];
+        listIframeObjServicec.push(getIframe('iframe1','admin/index.html'));
+        listIframeObjServicec.push(getIframe('iframe2','null'));
+        listIframeObjServicec.push(getIframe('iframe3','null'));
+        listIframeObjServicec.push(getIframe('iframe4','iframe-pages/mainPage/mainPage.html'));
+
+        for(let j = 0; j<menuServicesLiList.length; j++){
+            menuServicesLiList[j].onclick = function(){
+                var pageY = window.pageYOffset || document.documentElement.scrollTop;
+                if(pageY >inner_head_size+100){
+                    window.scrollTo(0,0);
+                }
+                this.setAttribute('data-type','serv');
+                removeAllAtribute(this);
+                self.iframeSetChenge(listIframeObjServicec[j]);
+            }
+        }
+
     },
+
+
 
     sendRequest: function (options) {
         var url = 'http://localhost:8888/';
@@ -182,39 +269,37 @@ function TransportService() {
         this.request('POST', url, data, async, successHandler, errorHandler, completeHandler);
     }
 }
+
 function animate(options){
     var start = performance.now();
 
     requestAnimationFrame(function animate(time) {
         var timeFraction = (time - start) / options.duration ;
         if (timeFraction > 1) timeFraction = 1;
-        var progress = options.timing(timeFraction)
+        var progress = options.timing(timeFraction);
         options.draw(progress);
         if (timeFraction < 1) {
             requestAnimationFrame(animate);
         }
     });
 }
-function menyHolder(){
 
-
-    var menuJS = document.getElementById('menuUl');
-    var menuJSClientHeight = menuJS.clientHeight;
-
-    var inner_header = document.getElementById('innerHeader');
-    var inner_headerClientHeight = inner_header.clientHeight;
-
-    window.onscroll  = function(){
-      var top = window.pageYOffset || document.documentElement.scrollTop;
-        if(top>= inner_headerClientHeight - menuJSClientHeight){
-            menuJS.style.position = 'fixed';
-            menuJS.style.top = '0';
+function removeAllAtribute(active){
+    var buttonsMenuUl_li = document.getElementsByClassName('parentMenu');
+    var menuUlLi = buttonsMenuUl_li[0].querySelectorAll('ul > li');
+    for(var i = 0; i<menuUlLi.length; i++){
+        if(menuUlLi[i]!=active){
+            menuUlLi[i].removeAttribute('data-type');
         }
-        if(top< inner_headerClientHeight - menuJSClientHeight){
-            menuJS.style.position = 'absolute';
-            menuJS.style.top = '';
-            menuJS.style.bottom = '0';
-        }
-    };
 
+    }
 }
+function  getIframe(iframeName,iframeSrc){
+    var iframeObj = {
+        name:iframeName,
+        src: iframeSrc
+    };
+    return iframeObj;
+    }
+delete  MainIndexControl.constructor;
+delete  MainIndexControl.MainControlMenu;

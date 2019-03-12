@@ -47,6 +47,7 @@ body {
 #header {
   width: 100%;
   height: 240px;
+  user-select: none;
 }
 #header #innerHeader {
   width: 100%;
@@ -238,6 +239,7 @@ body {
   position: relative;
   height: 72px;
   width: 100%;
+  color: #26972d;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul li {
   float: left;
@@ -247,7 +249,6 @@ body {
   font-size: 16px;
   text-align: center;
   line-height: 72px;
-  color: #26972d;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuInformation ul li:hover {
   transition: 0.5s;
@@ -269,6 +270,7 @@ body {
   height: 72px;
   width: 100%;
   vertical-align: middle;
+  color: #ffb040;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li {
   -webkit-hyphens: auto;
@@ -280,7 +282,6 @@ body {
   height: 100%;
   font-size: 16px;
   text-align: center;
-  color: #ffb040;
 }
 #header #innerHeader #menuUl #innerMenuUl .parentMenu #menuServices ul li:hover {
   background-color: #ffb040;

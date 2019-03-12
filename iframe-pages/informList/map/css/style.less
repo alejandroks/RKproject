@@ -1,0 +1,209 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+@font-face {
+    font-family: mob2;
+    src: url(../images/mob2.otf);
+}
+@font-face {
+    font-family: mob;
+    src: url(../images/mob.otf);
+}
+body {
+    width:100%;
+    font-family: mob2;
+}
+img {
+    border:0;
+}
+#wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgba(255,250,250,0.78);
+    #center{
+        position: absolute;
+        width: 1000px;
+        height: 100%;
+        left: 50%;
+        margin-left: -500px;
+        border-left: 3px solid #696969 ;
+        border-right: 3px solid #696969;
+        box-shadow: 0px 6px 39px 14px rgba(0,0,0,0.35);
+    }
+    
+}
+#footer {
+    text-align:center;
+}
+.slider {
+    width:100%;
+    min-width:1000px;
+    height:520px;
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    text-align:center;
+}
+.slider .bd {
+    width:1005px;
+    position:absolute;
+    left:50%;
+    margin-left:-500px
+}
+.slider .bd li {
+    width:1005px;
+    overflow:hidden;
+}
+.slider .bd li img {
+    display:block;
+    width:1005px;
+    height:520px;
+}
+.slider .tempWrap {
+    overflow:visible !important
+}
+.slider .tempWrap ul {
+    margin-left:-1005px !important;
+}
+.slider .hd {
+    position:absolute;
+    width:100%;
+    left:0;
+    z-index:1;
+    height:8px;
+    bottom:20px;
+    text-align:center;
+}
+.slider .hd li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+    width:8px;
+    height:8px;
+    line-height:99px;
+    overflow:hidden;
+    background:url(../images/slider-btn.png) 0 -10px no-repeat;
+    margin:0 5px;
+    cursor:pointer;
+    filter:alpha(opacity=80);
+    opacity:0.6;
+}
+.slider .hd li.on {
+    background-position:0 0;
+    filter:alpha(opacity=100);
+    opacity:1;
+}
+.slider .pnBtn {
+    position:absolute;
+    z-index:1;
+    top:0;
+    width:100%;
+    height:520px;
+    cursor:pointer;
+}
+.slider .prev {
+    left:-50%;
+    margin-left:-499px;
+}
+.slider .next {
+    left:50%;
+    margin-left:504px;
+}
+.slider .pnBtn .blackBg {
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:520px;
+    background:black;
+    filter:alpha(opacity=80);
+    opacity:0.75;
+}
+.slider .pnBtn .arrow {
+    display:none;
+    position:absolute;
+    top:60px;
+    z-index:1;
+    width:60px;
+    height:350px;
+}
+.slider .pnBtn .arrow:hover {
+    filter:alpha(opacity=60);
+    opacity:0.6;
+}
+.slider .prev .arrow {
+    right:0;
+    background:url(../images/slider-arrow.png) -120px 0 no-repeat;
+}
+.slider .next .arrow {
+    left:0;
+    background:url(../images/slider-arrow.png) 0 0 no-repeat;
+}
+#newsBlock{
+    margin-top: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+    #newsBlockInner{
+        width: 1000px;
+        position: relative;
+        margin: 0 auto;
+        background-color: red;
+        overflow: hidden;
+        .newsBlockRows{
+            width: 100%;
+            margin-left: 15px;
+            .newsRow{
+                position: relative;
+                width: 100%;
+                min-height: 50px;
+                color: black;
+                cursor: pointer;
+                display: inline-block;
+                .newsCellText{
+                background-color: white;
+                border: 1px solid darkgray;
+                margin-top: 5px;
+                white-space: nowrap;
+                width: 900px;
+                min-height: 50px;
+                    display: inline-block;
+                &.expanded{
+                    white-space: normal;
+                    }
+                    .headNews{
+                        font-family: mob;
+                        font-size: 25px;
+                       font-weight: 100;
+                        //text-decoration: underline;
+                    }
+                    .text{
+                        font-size: 15px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                }
+                .newsCellImg{
+                    position: relative;
+                    width: 50px;
+                    float: left;
+                    height: 50px;
+                    background-color: green;
+                    margin: 5px 5px 5px 5px;
+                }
+
+            }
+        }
+        .exeptionNews{
+            width: 100%;
+            height: 50px;
+            background-color: green;
+            text-align: center;
+            line-height: 25px;
+        }
+    }
+}

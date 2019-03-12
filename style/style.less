@@ -50,6 +50,7 @@ body{
 #header{
   width: 100%;
   height: 240px;
+  user-select: none;
   #innerHeader{
     width: 100%;
     height: 100%;
@@ -245,6 +246,7 @@ body{
               position: relative;
               height:72px;
               width: 100%;
+              color: @primary-color;
               li{
                 float: left;
                 width: 25%;
@@ -253,7 +255,7 @@ body{
                 font-size: 16px;
                 text-align: center;
                 line-height: 72px;
-                color: @primary-color;
+
                 &:hover{
                   transition: 0.5s;
                   background-color: @primary-color;
@@ -277,6 +279,7 @@ body{
               height:72px;
               width: 100%;
               vertical-align:middle;
+              color: @primary-color-2;
               li{
                 -webkit-hyphens: auto;
                 -moz-hyphens: auto;
@@ -287,7 +290,7 @@ body{
                 height: 100%;
                 font-size: 16px;
                 text-align: center;
-                color: @primary-color-2;
+
                 &:hover{
                   background-color: @primary-color-2;
                   color: black;
